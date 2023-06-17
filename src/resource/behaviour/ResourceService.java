@@ -1,0 +1,41 @@
+package resource.behaviour;
+
+import resource.structure.*;
+
+import java.util.Scanner;
+
+public class ResourceService { // Car == the main Resource
+
+    // TODO maybe add something more, so you can call the booked resources for example in main class
+    private Resource resource;
+
+    public void getSelectedResource() {
+        Scanner sc = new Scanner(System.in);
+        boolean userInput = false;
+        while (!userInput) {
+            System.out.println("If you want to book something extra to your car input 'true' or 'false' to the following questions: ");
+            System.out.println("Do you want do book a child seat to your car?");
+            boolean childseat = sc.nextBoolean();
+
+            System.out.println("Do you want do book a Top-Box to your car?");
+            boolean topBox = sc.nextBoolean();
+
+            if (childseat && topBox) {
+                resource = new ChildSeat(new RoofBox(new Car())); // car == the main resource constructor call:
+            } else if (childseat) {                    // specification -> generalization
+                resource = new ChildSeat(new Car());
+            } else if (topBox) {
+                resource = new RoofBox(new Car());
+            } else {
+                resource = new Car();
+            }
+            System.out.println(resource.addResource());
+            System.out.println();
+            System.out.println("If everything is right input 'true' if not input 'false' to start the selection again:");
+            userInput = sc.nextBoolean();
+        }
+
+    }
+
+
+}

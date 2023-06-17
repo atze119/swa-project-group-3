@@ -1,5 +1,9 @@
+import resource.behaviour.ResourceService;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ResourceService resourceService = new ResourceService();
+        resourceService.getSelectedResource();
+
     }
 }
