@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="Implemented the decorator pattern with resource package.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/behaviour/ResourceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/structure/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/structure/ChildSeat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/structure/Resource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/structure/ResourceAdder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resource/structure/RoofBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/resource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/behaviour/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/behaviour/ResourceService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +135,7 @@
       <workItem from="1685011748230" duration="1349000" />
       <workItem from="1685993573724" duration="2312000" />
       <workItem from="1685997245005" duration="197000" />
-      <workItem from="1686988358555" duration="4092000" />
+      <workItem from="1686988358555" duration="5274000" />
     </task>
     <task id="LOCAL-00001" summary="Create Structure">
       <created>1685012362808</created>
@@ -181,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686052311704</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implemented the decorator pattern with resource package.">
+      <created>1686992540869</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686992540870</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +196,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="person" />
+                        <option value="resource" />
                       </list>
                     </value>
                   </entry>
@@ -228,6 +226,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/resource/behaviour/ResourceService.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

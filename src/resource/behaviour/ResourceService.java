@@ -15,14 +15,14 @@ public class ResourceService { // Car == the main Resource
         while (!userInput) {
             System.out.println("If you want to book something extra to your car input 'true' or 'false' to the following questions: ");
             System.out.println("Do you want do book a child seat to your car?");
-            boolean childseat = sc.nextBoolean();
+            boolean childSeat = sc.nextBoolean();
 
             System.out.println("Do you want do book a Top-Box to your car?");
             boolean topBox = sc.nextBoolean();
 
-            if (childseat && topBox) {
+            if (childSeat && topBox) {
                 resource = new ChildSeat(new RoofBox(new Car())); // car == the main resource constructor call:
-            } else if (childseat) {                    // specification -> generalization
+            } else if (childSeat) {                    // specification -> generalization
                 resource = new ChildSeat(new Car());
             } else if (topBox) {
                 resource = new RoofBox(new Car());
