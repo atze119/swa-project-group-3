@@ -9,7 +9,7 @@ public class ResourceService { // Car == the main Resource
     // TODO maybe add something more, so you can call the booked resources for example in main class
     private Resource resource;
 
-    public void getSelectedResource() {
+    public Resource getSelectedResource() { // return resource for JUnit test (null testing)
         Scanner sc = new Scanner(System.in);
         boolean userInput = false;
         while (!userInput) {
@@ -34,7 +34,7 @@ public class ResourceService { // Car == the main Resource
             System.out.println("If everything is right input 'true' if not input 'false' to start the selection again:");
             userInput = sc.nextBoolean();
         }
-
+        return resource;
     }
 
 

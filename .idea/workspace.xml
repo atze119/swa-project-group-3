@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="Implemented the decorator pattern with resource package.">
+    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="changed childseat to childSeat (line 23)">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resource/behaviour/ResourceServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resource/behaviour/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/behaviour/ResourceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swa-project-group-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swa-project-group-3.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +23,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -52,6 +57,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "dart.analysis.tool.window.visible": "false",
     "ignore.virus.scanning.warn.message": "true",
@@ -75,13 +82,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="resource.behaviour" />
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ResourceServiceTest.getSelectedResource">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="swa-project-group-3" />
@@ -109,18 +117,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ResourceServiceTest.getSelectedResource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swa-project-group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="resource.behaviour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="resource.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="resource.behaviour.ResourceServiceTest" />
+      <option name="METHOD_NAME" value="getSelectedResource" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ResourceServiceTest.getSelectedResource" />
       <item itemvalue="JUnit.AuthenticationServiceTest" />
       <item itemvalue="JUnit.PersonServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ResourceServiceTest.getSelectedResource" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AuthenticationServiceTest" />
         <item itemvalue="JUnit.PersonServiceTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.PersonServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +160,7 @@
       <workItem from="1685011748230" duration="1349000" />
       <workItem from="1685993573724" duration="2312000" />
       <workItem from="1685997245005" duration="197000" />
-      <workItem from="1686988358555" duration="5274000" />
+      <workItem from="1686988358555" duration="5915000" />
     </task>
     <task id="LOCAL-00001" summary="Create Structure">
       <created>1685012362808</created>
@@ -179,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686992540870</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="changed childseat to childSeat (line 23)">
+      <created>1686993720528</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686993720528</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,27 +245,8 @@
     <MESSAGE value="Person abstract factory ground structure done. Still need further little changes with specific information and so on." />
     <MESSAGE value="added Strategy Pattern with AuthenticationService" />
     <MESSAGE value="Implemented the decorator pattern with resource package." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented the decorator pattern with resource package." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/resource/structure/RoofBox.java</url>
-          <line>8</line>
-          <properties class="resource.structure.RoofBox" method="addResource">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/resource/behaviour/ResourceService.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="changed childseat to childSeat (line 23)" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed childseat to childSeat (line 23)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
