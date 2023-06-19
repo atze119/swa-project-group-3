@@ -7,4 +7,7 @@ public class EnglishBooking {
         this.body = body;
         this.footer = footer;
     }
+    public void printBooking() {
+        System.out.printf(head + "\n" + body + "\n" + footer + "\n");
+    }
 }

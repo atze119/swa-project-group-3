@@ -23,6 +23,7 @@ public class BookingService {
                     .head("Invoice")
                     .body("body contents")
                     .footer("imprint").buildEnglish();
+            englishBooking.printBooking();
         }
 
 
