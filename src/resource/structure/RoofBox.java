@@ -6,7 +6,7 @@ public class RoofBox extends ResourceAdder { // TODO in exam the name should be 
     }
 
     @Override
-    public String addResource() {
-        return super.addResource() + ", roof box";
+    public String getResource() {
+        return super.getResource() + ", roof box";
     }
 }

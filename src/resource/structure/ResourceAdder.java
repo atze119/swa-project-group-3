@@ -8,7 +8,8 @@ public abstract class ResourceAdder implements Resource {
     }
 
     @Override
-    public String addResource() {
-        return resource.addResource();
+    public String getResource() {
+        return resource.getResource();
     }
+
 }

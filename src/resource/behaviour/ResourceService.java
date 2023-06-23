@@ -29,7 +29,7 @@ public class ResourceService { // Car == the main Resource
             } else {
                 resource = new Car();
             }
-            System.out.println(resource.addResource());
+            System.out.println("For the booking you have selected: " + resource.getResource() + ".");
             System.out.println();
             System.out.println("If everything is right input 'true' if not input 'false' to start the selection again:");
             userInput = sc.nextBoolean();

@@ -6,7 +6,7 @@ public class ChildSeat extends ResourceAdder {
     }
 
     @Override
-    public String addResource() {
-        return super.addResource() + ", child seat";
+    public String getResource() {
+        return super.getResource() + ", child seat";
     }
 }

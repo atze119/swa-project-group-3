@@ -1,8 +1,10 @@
 import authentification.behaviour.AuthenticationService;
+import booking.behaviour.BookingService;
 import person.behaviour.PersonService;
 import person.structure.Person;
 import person.structure.PersonType;
 import resource.behaviour.*;
+import resource.structure.Resource;
 
 import java.util.Scanner;
 
@@ -16,7 +18,11 @@ public class Main {
         authenticationService.authenticateSubject(person);
 
         ResourceService resourceService = new ResourceService();
-        resourceService.getSelectedResource();
+        Resource resource = resourceService.getSelectedResource();
+
+        BookingService bookingService = new BookingService();
+        bookingService.createBooking(person, resource);
+
 
     }
 }
