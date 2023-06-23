@@ -9,26 +9,26 @@ import java.util.Scanner;
 public class AuthenticationService {
 
     public Credential authenticateSubject(Person subject) {
-        Credential credential = null;
+        Credential credential;
         if (subject instanceof NaturalPerson) {
-            System.out.println("Choose between 'USERNAMEPASSWORDSTRATEGY', 'FINGERPRINTSTRATEGY', 'EYESCANSTRATEGY'");
-            Scanner sc = new Scanner(System.in); // TODO maybe switch from enum with USERNAME... to numbers and display a list
-            CredentialType credentialType = CredentialType.valueOf(sc.next());
-            switch (credentialType) {
-                case USERNAMEPASSWORDSTRATEGY:
-                    credential = new UserNamePasswordStrategy();
-                    break;
-                case FINGERPRINTSTRATEGY:
-                    credential = new FingerPrintStrategy();
-                    break;
-                case EYESCANSTRATEGY:
-                    credential = new EyeScanStrategy();
-                    break;
-                default:
-                    throw new IllegalArgumentException("Unexpected value: " + credentialType);
-            }
+            System.out.println("""
+                    Choose between Username-Password-Strategy: 1
+                    Fingerprint-Scan-Strategy: 2
+                    Eye-Scan-Strategy: 3
+                    """);
+            Scanner sc = new Scanner(System.in);
+            int credentialType = sc.nextInt();
+
+            credential = switch (credentialType) {
+                case 1 -> new UserNamePasswordStrategy();
+                case 2 -> new FingerPrintStrategy();
+                case 3 -> new EyeScanStrategy();
+                default -> throw new IllegalArgumentException("Unexpected value: " + credentialType);
+            };
+
         } else {
-            // TODO how is a LegalPerson going to authenticate itself?
+            credential = new ValidationCodeStrategy();
+            // At this point Legal person has only one strategy
         }
         credential.authenticate();
         return credential;
