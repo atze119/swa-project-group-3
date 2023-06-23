@@ -1,0 +1,29 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import authentification.behaviour.AuthenticationService;\r\nimport person.behaviour.PersonService;\r\nimport person.structure.Person;\r\nimport person.structure.PersonType;\r\n\r\nimport java.util.Scanner;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n        Scanner sc = new Scanner(System.in);\r\n        System.out.println(\"Please choose between the following two types: 'LEGAL_PERSON', 'NATURAL_PERSON'\");\r\n        //PersonService personService = new PersonService(); when static stays\r\n        Person person = PersonService.createPerson(PersonType.valueOf(sc.next()));\r\n        AuthenticationService authenticationService = new AuthenticationService();\r\n        authenticationService.authenticateSubject(person);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision c533dde20474eb79aaa7287baacfdc90d734838c)
++++ b/src/Main.java	(date 1687515058859)
+@@ -2,6 +2,7 @@
+ import person.behaviour.PersonService;
+ import person.structure.Person;
+ import person.structure.PersonType;
++import resource.behaviour.*;
+ 
+ import java.util.Scanner;
+ 
+@@ -13,5 +14,9 @@
+         Person person = PersonService.createPerson(PersonType.valueOf(sc.next()));
+         AuthenticationService authenticationService = new AuthenticationService();
+         authenticationService.authenticateSubject(person);
++
++        ResourceService resourceService = new ResourceService();
++        resourceService.getSelectedResource();
++
+     }
+ }
+\ No newline at end of file

@@ -2,6 +2,7 @@ import authentification.behaviour.AuthenticationService;
 import person.behaviour.PersonService;
 import person.structure.Person;
 import person.structure.PersonType;
+import resource.behaviour.*;
 
 import java.util.Scanner;
 
@@ -13,5 +14,9 @@ public class Main {
         Person person = PersonService.createPerson(PersonType.valueOf(sc.next()));
         AuthenticationService authenticationService = new AuthenticationService();
         authenticationService.authenticateSubject(person);
+
+        ResourceService resourceService = new ResourceService();
+        resourceService.getSelectedResource();
+
     }
 }
