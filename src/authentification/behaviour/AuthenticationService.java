@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class AuthenticationService {
 
-    public Credential authenticateSubject(Person subject) {
+    public Credential authenticateSubject(Person subject) {    //Subject als Fachtyp eigene Klasse?
         Credential credential;
         if (subject instanceof NaturalPerson) {
             System.out.println("""
