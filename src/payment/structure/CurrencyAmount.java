@@ -13,6 +13,7 @@ public class CurrencyAmount {
     }
 
 
-    public void setAmount(int amount) {
+    public void setAmount(int amount){
+        this.amount = amount;
     }
 }

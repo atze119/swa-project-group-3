@@ -28,6 +28,5 @@ public class Main {
 
         PaymentService paymentService = new PaymentService();
         Payment payment = paymentService.payAmount(booking);
-
     }
 }

@@ -37,7 +37,7 @@ public class PaymentService {
             case PAYPAL -> new PayPalPayment();
         };
 
-        payment.processPayment(senderAccount,receiverAccount);
+        payment.processPayment(senderAccount,receiverAccount,booking);
         return payment;
     }
 
