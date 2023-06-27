@@ -6,4 +6,9 @@ public class Car implements Resource {
     public String getResource() {
         return "car";
     }
+
+    @Override
+    public int getCosts() {
+        return 200;
+    }
 }

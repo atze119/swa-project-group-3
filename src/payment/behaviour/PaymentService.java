@@ -1,12 +1,19 @@
 package payment.behaviour;
 
+import booking.structure.Booking;
 import payment.structure.*;
+
 
 import java.util.Scanner;
 
 public class PaymentService {
 
-    public void payAmount(){
+    public Payment payAmount(Booking booking){
+
+        CurrencyAmount currencyAmountSender = new CurrencyAmount(booking.getCosts());
+        CurrencyAmount currencyAmountReceiver = new CurrencyAmount(0);
+        Account senderAccount = new Account(currencyAmountSender);
+        Account receiverAccount = new Account(currencyAmountReceiver);
 
         System.out.println("""
                 Which payment method do you want to use? Choose between:
@@ -30,7 +37,8 @@ public class PaymentService {
             case PAYPAL -> new PayPalPayment();
         };
 
-        payment.processPayment();
+        payment.processPayment(senderAccount,receiverAccount);
+        return payment;
     }
 
 }

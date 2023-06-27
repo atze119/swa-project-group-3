@@ -2,9 +2,9 @@ package payment.structure;
 
 public abstract class Payment{
 
-    public void processPayment(){
+    public void processPayment(Account senderAccount, Account receiverAccount){
         authenticateSenderAccount();
-        currencyAmountFromSenderToReceiver();
+        currencyAmountFromSenderToReceiver(senderAccount, receiverAccount);
         createPaymentConfirmation();
     }
 
@@ -12,7 +12,7 @@ public abstract class Payment{
         System.out.println("You have authenticated yourself with the payment service provider");
     }
 
-    protected abstract void currencyAmountFromSenderToReceiver();
+    protected abstract void currencyAmountFromSenderToReceiver(Account senderAccount, Account receiverAccount);
 
     private void createPaymentConfirmation() {
         System.out.println("This is your payment confirmation");

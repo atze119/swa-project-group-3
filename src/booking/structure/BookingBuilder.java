@@ -1,7 +1,8 @@
 package booking.structure;
 
 public class BookingBuilder {
-    private String head, body, footer;
+    private String head, body;
+    private int footer;
 
     public BookingBuilder head(String head) {
         this.head = head;
@@ -12,7 +13,7 @@ public class BookingBuilder {
         return this;
     }
 
-    public BookingBuilder footer(String footer) {
+    public BookingBuilder footer(int footer) {
         this.footer = footer;
         return this;
     }
@@ -23,7 +24,5 @@ public class BookingBuilder {
     public EnglishBooking buildEnglish() { // TODO is it allowed to use two build methods?
         return new EnglishBooking(head, body, footer);
     }
-
-
 
 }

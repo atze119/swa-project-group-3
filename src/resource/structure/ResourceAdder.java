@@ -12,4 +12,7 @@ public abstract class ResourceAdder implements Resource {
         return resource.getResource();
     }
 
+    @Override
+    public int getCosts(){return resource.getCosts();}
+
 }

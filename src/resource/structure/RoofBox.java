@@ -1,6 +1,7 @@
 package resource.structure;
 
 public class RoofBox extends ResourceAdder { // TODO in exam the name should be "SetTopBox" i think that makes no sense
+
     public RoofBox(Resource resource) {
         super(resource);
     }
@@ -8,5 +9,10 @@ public class RoofBox extends ResourceAdder { // TODO in exam the name should be 
     @Override
     public String getResource() {
         return super.getResource() + ", roof box";
+    }
+
+    @Override
+    public int getCosts() {
+        return super.getCosts() + 20;
     }
 }

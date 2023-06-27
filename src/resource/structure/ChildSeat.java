@@ -9,4 +9,9 @@ public class ChildSeat extends ResourceAdder {
     public String getResource() {
         return super.getResource() + ", child seat";
     }
+
+    @Override
+    public int getCosts() {
+        return super.getCosts() + 10;
+    }
 }

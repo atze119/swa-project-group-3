@@ -1,10 +1,10 @@
-package booking.behaviour;
+package payment.behaviour;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class BookingServiceTest {
+class PaymentServiceTest {
 
     @BeforeEach
     void setUp() {
@@ -15,12 +15,9 @@ class BookingServiceTest {
     }
 
     @Test
-    void createBooking() {
-        /*
-        BookingService bookingService = new BookingService();
-        bookingService.createBooking(person, resource);
-        assertNotNull();
-        */
+    void payAmount() {
         // TODO implement Test
+        PaymentService paymentService = new PaymentService();
+
     }
 }

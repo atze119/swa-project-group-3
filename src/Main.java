@@ -1,5 +1,8 @@
 import authentification.behaviour.AuthenticationService;
 import booking.behaviour.BookingService;
+import booking.structure.Booking;
+import payment.behaviour.PaymentService;
+import payment.structure.Payment;
 import person.behaviour.PersonService;
 import person.structure.Person;
 import person.structure.PersonType;
@@ -21,8 +24,10 @@ public class Main {
         Resource resource = resourceService.getSelectedResource();
 
         BookingService bookingService = new BookingService();
-        bookingService.createBooking(person, resource);
+        Booking booking = bookingService.createBooking(person, resource);
 
+        PaymentService paymentService = new PaymentService();
+        Payment payment = paymentService.payAmount(booking);
 
     }
 }
