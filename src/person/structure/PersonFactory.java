@@ -10,7 +10,7 @@ public class PersonFactory {
             case NATURAL_PERSON:
                 System.out.println("What is your First- and Lastname?");
                 String firstName = sc.next();
-                String lastName = sc.next();
+                String lastName = sc.next(); // TODO implement if else to check if input is valid
                 System.out.println("Are you older than 21? (type 'true' or 'false')");
                 boolean age = sc.nextBoolean();
                 if (age == false) {
