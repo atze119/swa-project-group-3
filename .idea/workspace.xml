@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="added english booking text">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="started adding check cases for valid input and changed input from true or false to [Y] [N]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/person/behaviour/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/behaviour/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/PersonServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/PersonServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/structure/PersonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/structure/PersonFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +124,7 @@
       <workItem from="1685011748230" duration="1349000" />
       <workItem from="1687954649032" duration="912000" />
       <workItem from="1687969037044" duration="314000" />
-      <workItem from="1687988609121" duration="1631000" />
+      <workItem from="1687988609121" duration="3476000" />
     </task>
     <task id="LOCAL-00001" summary="Create Structure">
       <created>1685012362808</created>
@@ -157,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1687515259148</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="started adding check cases for valid input and changed input from true or false to [Y] [N]">
+      <option name="closed" value="true" />
+      <created>1687990484953</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687990484953</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +211,7 @@
     <MESSAGE value="Create Structure" />
     <MESSAGE value="Added authentication, person, booking, resource" />
     <MESSAGE value="implemented Booking with Builder Pattern and merged person, resource and booking" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented Booking with Builder Pattern and merged person, resource and booking" />
+    <MESSAGE value="started adding check cases for valid input and changed input from true or false to [Y] [N]" />
+    <option name="LAST_COMMIT_MESSAGE" value="started adding check cases for valid input and changed input from true or false to [Y] [N]" />
   </component>
 </project>
