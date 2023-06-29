@@ -11,27 +11,34 @@ import java.util.Scanner;
 
 public class BookingService {
 
-    public Booking createBooking(Person person, Resource resource) { // TODO person and resource parameters to put them in the booking head/body/footer
-        Booking booking;
+    public Booking createBooking(Person person, Resource resource) {
+        Booking booking = null;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Do you want to get your booking in german or english? Input 'german' or 'english'");
-        if (sc.next().equals("german")) {
-
-            GermanBooking germanBooking = new BookingBuilder()
-                    .head(person.getName()) // maybe input Person.getName
-                    .body(resource.getResource()) // TODO resources are in english
-                    .footer(resource.getCosts()) // something
-                    .buildGerman();
-            germanBooking.printBooking();
-            booking = germanBooking;
-        } else {
-            EnglishBooking englishBooking = new BookingBuilder()
-                    .head(person.getName())
-                    .body(resource.getResource())
-                    .footer(resource.getCosts())
-                    .buildEnglish();
-            englishBooking.printBooking();
-            booking = englishBooking;
+        boolean validInput = false;
+        while (!validInput) {
+            System.out.println("Do you want to get your booking in german or english? German [G] | English [E]");
+            String userInput = sc.next();
+            if (!userInput.equals("G") && !userInput.equals("E")) {
+                System.out.println("Please input a valid character! [Y] | [N]");
+            } else if (userInput.equals("G")) {
+                GermanBooking germanBooking = new BookingBuilder()
+                        .head(person.getName()) // maybe input Person.getName
+                        .body(resource.getResource()) // TODO resources are in english
+                        .footer(resource.getCosts()) // something
+                        .buildGerman();
+                germanBooking.printBooking();
+                booking = germanBooking;
+                validInput = true; // to break out of while loop
+            } else {
+                EnglishBooking englishBooking = new BookingBuilder()
+                        .head(person.getName())
+                        .body(resource.getResource())
+                        .footer(resource.getCosts())
+                        .buildEnglish();
+                englishBooking.printBooking();
+                booking = englishBooking;
+                validInput = true; // to break out of while loop
+            }
         }
         return booking;                 //return booking --> payment needs booking values
     }

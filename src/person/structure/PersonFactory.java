@@ -17,7 +17,7 @@ public class PersonFactory {
                     System.out.println("Are you older than 21? Yes [Y] | No [N]");
                     String validAge = sc.next();
                     if (!validAge.equals("Y") && !validAge.equals("N")) {
-                        System.out.println("Please input a valid character!");
+                        System.out.println("Please input a valid character! [Y] | [N]");
                     } else if (validAge.equals("Y")) {
                         age = true;
                         correctInput = true;
@@ -32,7 +32,7 @@ public class PersonFactory {
                     System.out.println("Do you have your driver's license since 3 years? Yes [Y] | No [N]");
                     String validLicenseAge = sc.next();
                     if (!validLicenseAge.equals("Y") && !validLicenseAge.equals("N")) {
-                        System.out.println("Please input a valid character!");
+                        System.out.println("Please input a valid character! [Y] | [N]");
                     } else if (validLicenseAge.equals("Y")) {
                         licenseAge = true;
                         correctInput = true;

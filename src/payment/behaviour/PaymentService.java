@@ -14,6 +14,7 @@ public class PaymentService {
         CurrencyAmount currencyAmountReceiver = new CurrencyAmount(0);
         Account senderAccount = new Account(currencyAmountSender);
         Account receiverAccount = new Account(currencyAmountReceiver);
+        Payment payment = null;
 
         System.out.println("""
                 Which payment method do you want to use? Choose between:
@@ -22,21 +23,27 @@ public class PaymentService {
                 PayPal: 3
                 """);
         Scanner sc = new Scanner(System.in);
-        int paymentMethod= sc.nextInt();
+        boolean validInput = false;
+        while (!validInput) {
+            int paymentMethod = sc.nextInt();
+            if (paymentMethod < 1 || paymentMethod > 3) {
+                System.out.println("Please input a valid number between 1 and 3!");
+            } else {
+                PaymentType paymentType = switch(paymentMethod){
+                    case 1 -> PaymentType.GOOGLE_WALLET;
+                    case 2 -> PaymentType.MOBILE_MONEY_WALLET;
+                    case 3 -> PaymentType.PAYPAL;
+                    default -> throw new IllegalStateException("Unexpected value: " + paymentMethod);
+                };
 
-        PaymentType paymentType = switch(paymentMethod){
-            case 1 -> PaymentType.GOOGLE_WALLET;
-            case 2 -> PaymentType.MOBILE_MONEY_WALLET;
-            case 3 -> PaymentType.PAYPAL;
-            default -> throw new IllegalStateException("Unexpected value: " + paymentMethod);
-        };
-
-        Payment payment = switch(paymentType){
-            case GOOGLE_WALLET -> new GoogleWalletPayment();
-            case MOBILE_MONEY_WALLET -> new MobileMoneyWalletPayment();
-            case PAYPAL -> new PayPalPayment();
-        };
-
+                payment = switch(paymentType){
+                    case GOOGLE_WALLET -> new GoogleWalletPayment();
+                    case MOBILE_MONEY_WALLET -> new MobileMoneyWalletPayment();
+                    case PAYPAL -> new PayPalPayment();
+                };
+                validInput = true;
+            }
+        }
         payment.processPayment(senderAccount,receiverAccount,booking);
         return payment;
     }

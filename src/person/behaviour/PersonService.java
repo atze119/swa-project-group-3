@@ -22,7 +22,7 @@ public class PersonService {
                 """);
                 String userInput = sc.next();
                 if (!userInput.equals("N") && !userInput.equals("L")) {
-                    System.out.println("Please input a valid character!");
+                    System.out.println("Please input a valid character! [Y] | [N]");
                 } else {
                     personType = userInput.equals("N") ? PersonType.NATURAL_PERSON : PersonType.LEGAL_PERSON;
                     correctInput = true;
@@ -40,7 +40,7 @@ public class PersonService {
                     System.out.println();
                     String validData = sc.next();
                     if (!validData.equals("Y") && !validData.equals("N")) {
-                        System.out.println("Please input a valid character!");
+                        System.out.println("Please input a valid character! [Y] | [N]");
                     } else if (validData.equals("Y")) {
                         correctData = true;
                         correctInput = true;
