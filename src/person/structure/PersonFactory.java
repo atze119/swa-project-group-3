@@ -7,10 +7,10 @@ public class PersonFactory {
         Person person;
         Scanner sc = new Scanner(System.in);
         switch (personType) {
-            case NATURAL_PERSON:
+            case NATURAL_PERSON -> {
                 System.out.println("What is your First- and Lastname?");
                 String firstName = sc.next();
-                String lastName = sc.next(); // TODO implement if else to check if input is valid
+                String lastName = sc.next();
                 boolean correctInput = false;
                 boolean age = false;
                 while (!correctInput) {
@@ -28,7 +28,7 @@ public class PersonFactory {
                 }
                 correctInput = false;
                 boolean licenseAge = false;
-                while(!correctInput) {
+                while (!correctInput) {
                     System.out.println("Do you have your driver's license since 3 years? Yes [Y] | No [N]");
                     String validLicenseAge = sc.next();
                     if (!validLicenseAge.equals("Y") && !validLicenseAge.equals("N")) {
@@ -42,14 +42,13 @@ public class PersonFactory {
                     }
                 }
                 person = new NaturalPerson(firstName, lastName, age, licenseAge);
-                break;
-            case LEGAL_PERSON:
+            }
+            case LEGAL_PERSON -> {
                 System.out.println("What is the name of your company?");
                 String companyName = sc.nextLine();
                 person = new LegalPerson(companyName);
-                break;
-            default:
-                throw new IllegalArgumentException("Unexpected Value: " + personType);
+            }
+            default -> throw new IllegalArgumentException("Unexpected Value: " + personType);
         }
         return person;
     }
