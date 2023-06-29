@@ -56,10 +56,8 @@ public class ResourceService { // Car == the main Resource
             String userInput = sc.next();
             if (!userInput.equals("Y") && !userInput.equals("N")) {
                 System.out.println("Please input a valid character! [Y] | [N]");
-            } else if (userInput.equals("Y")){
-                return true;
             } else {
-                return false;
+                return userInput.equals("Y"); // if input == Y return true otherwise false
             }
         }
     }
