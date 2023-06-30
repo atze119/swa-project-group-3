@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="started adding check cases for valid input and changed input from true or false to [Y] [N]">
+    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource....">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/person/behaviour/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/behaviour/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/person/structure/PersonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/structure/PersonFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/behaviour/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/behaviour/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/structure/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/structure/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,23 +48,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/fynnj/IdeaProjects/Java_ist_auch_eine_Insel&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "dart.analysis.tool.window.visible": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Movitz/IdeaProjects/swa-project-group-3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -67,10 +73,42 @@
       <recent name="booking.behaviour" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PersonServiceTest.createPerson">
+  <component name="RunManager" selected="JUnit.PaymentServiceTest.runPaymentTestMultipleTimes">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="swa-project-group-3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceTest.payAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swa-project-group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="payment.behaviour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="payment.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="payment.behaviour.PaymentServiceTest" />
+      <option name="METHOD_NAME" value="payAmount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceTest.runPaymentTestMultipleTimes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swa-project-group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="payment.behaviour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="payment.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="payment.behaviour.PaymentServiceTest" />
+      <option name="METHOD_NAME" value="runPaymentTestMultipleTimes" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,11 +140,15 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.PaymentServiceTest.payAmount" />
+      <item itemvalue="JUnit.PaymentServiceTest.runPaymentTestMultipleTimes" />
       <item itemvalue="JUnit.PersonServiceTest.createPerson" />
       <item itemvalue="JUnit.ResourceServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PaymentServiceTest.runPaymentTestMultipleTimes" />
+        <item itemvalue="JUnit.PaymentServiceTest.payAmount" />
         <item itemvalue="JUnit.PersonServiceTest.createPerson" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ResourceServiceTest" />
@@ -125,6 +167,7 @@
       <workItem from="1687954649032" duration="912000" />
       <workItem from="1687969037044" duration="314000" />
       <workItem from="1687988609121" duration="3476000" />
+      <workItem from="1688110588422" duration="2327000" />
     </task>
     <task id="LOCAL-00001" summary="Create Structure">
       <created>1685012362808</created>
@@ -163,28 +206,20 @@
       <option name="project" value="LOCAL" />
       <updated>1687990484953</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource....">
+      <created>1688052666283</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688052666283</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="master" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -206,12 +241,28 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create Structure" />
     <MESSAGE value="Added authentication, person, booking, resource" />
     <MESSAGE value="implemented Booking with Builder Pattern and merged person, resource and booking" />
     <MESSAGE value="started adding check cases for valid input and changed input from true or false to [Y] [N]" />
-    <option name="LAST_COMMIT_MESSAGE" value="started adding check cases for valid input and changed input from true or false to [Y] [N]" />
+    <MESSAGE value="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource...." />
+    <option name="LAST_COMMIT_MESSAGE" value="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource...." />
   </component>
 </project>

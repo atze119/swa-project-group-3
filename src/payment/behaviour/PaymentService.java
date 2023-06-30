@@ -2,18 +2,20 @@ package payment.behaviour;
 
 import booking.structure.Booking;
 import payment.structure.*;
+import person.structure.Person;
 
 
 import java.util.Scanner;
 
 public class PaymentService {
 
-    public Payment payAmount(Booking booking){
+    private static CurrencyAmount currencyAmountReceiver = new CurrencyAmount(0);
+
+    public Payment payAmount(Booking booking, Person person){
 
         CurrencyAmount currencyAmountSender = new CurrencyAmount(booking.getCosts());
-        CurrencyAmount currencyAmountReceiver = new CurrencyAmount(0);
-        Account senderAccount = new Account(currencyAmountSender);
-        Account receiverAccount = new Account(currencyAmountReceiver);
+        Account senderAccount = new Account(currencyAmountSender, person.getName());
+        Account receiverAccount = new Account(currencyAmountReceiver,"CarReservationSystem");
         Payment payment = null;
 
         System.out.println("""

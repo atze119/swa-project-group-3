@@ -1,6 +1,7 @@
 package payment.structure;
 
 import booking.structure.Booking;
+import person.structure.Person;
 
 public class GoogleWalletPayment extends Payment {
 
@@ -21,7 +22,7 @@ public class GoogleWalletPayment extends Payment {
 
         System.out.printf("""
                 The payment will now be made . . .
-                The amount of %d was transferred from the sender account to the receiver account using %s
-                %n""",transferAmount,GoogleWalletPayment.class.getSimpleName());
+                The amount of %d was transferred from the sender account (%s) to the receiver account (%s) using %s
+                %n""",transferAmount,senderAccount.getName(),receiverAccount.getName(),GoogleWalletPayment.class.getSimpleName());
     }
 }

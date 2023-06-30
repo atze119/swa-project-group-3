@@ -26,6 +26,6 @@ public class Main {
         Booking booking = bookingService.createBooking(person, resource);
 
         PaymentService paymentService = new PaymentService();
-        Payment payment = paymentService.payAmount(booking);
+        Payment payment = paymentService.payAmount(booking, person);
     }
 }
