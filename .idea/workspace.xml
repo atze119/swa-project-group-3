@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource....">
+    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="Payment and person are now connected; please check if this is correct and good">
+      <change afterPath="$PROJECT_DIR$/src/content/behaviour/ContentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/structure/Content.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/structure/File.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/structure/Folder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/structure/SimpleContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/structure/SummaryFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/content/behaviour/ContentServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/behaviour/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/behaviour/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/booking/structure/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/structure/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/booking/structure/EnglishBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/structure/EnglishBooking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/booking/structure/GermanBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/structure/GermanBooking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/content.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/payment/structure/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" afterDir="false" />
     </list>
@@ -23,16 +29,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="refinement" />
+        <entry key="$PROJECT_DIR$" value="authentication_person_booking_resource_payment_content" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,10 +76,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="content.behaviour" />
       <recent name="booking.behaviour" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PaymentServiceTest.runPaymentTestMultipleTimes">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="swa-project-group-3" />
@@ -147,10 +154,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PaymentServiceTest.runPaymentTestMultipleTimes" />
         <item itemvalue="JUnit.PaymentServiceTest.payAmount" />
         <item itemvalue="JUnit.PersonServiceTest.createPerson" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ResourceServiceTest" />
       </list>
     </recent_temporary>
@@ -167,7 +174,7 @@
       <workItem from="1687954649032" duration="912000" />
       <workItem from="1687969037044" duration="314000" />
       <workItem from="1687988609121" duration="3476000" />
-      <workItem from="1688110588422" duration="2327000" />
+      <workItem from="1688110588422" duration="14648000" />
     </task>
     <task id="LOCAL-00001" summary="Create Structure">
       <created>1685012362808</created>
@@ -213,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688052666283</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Payment and person are now connected; please check if this is correct and good">
+      <created>1688113279103</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688113279103</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +277,7 @@
     <MESSAGE value="implemented Booking with Builder Pattern and merged person, resource and booking" />
     <MESSAGE value="started adding check cases for valid input and changed input from true or false to [Y] [N]" />
     <MESSAGE value="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource...." />
-    <option name="LAST_COMMIT_MESSAGE" value="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource...." />
+    <MESSAGE value="Payment and person are now connected; please check if this is correct and good" />
+    <option name="LAST_COMMIT_MESSAGE" value="Payment and person are now connected; please check if this is correct and good" />
   </component>
 </project>

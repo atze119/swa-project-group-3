@@ -3,9 +3,16 @@ package payment.structure;
 import booking.structure.Booking;
 import person.structure.Person;
 
+import java.util.Date;
+
 public abstract class Payment{
 
+    private int transferAmount;
+    private int PaymentMonth;
+    private int PaymentYear;
     public void processPayment(Account senderAccount, Account receiverAccount, Booking booking){
+        this.PaymentMonth = booking.randomBookingMonth();
+        this.PaymentYear = 2023;
         authenticateSenderAccount(senderAccount, receiverAccount, booking);
         currencyAmountFromSenderToReceiver(senderAccount, receiverAccount, booking);
         createPaymentConfirmation(senderAccount, receiverAccount);
@@ -13,7 +20,7 @@ public abstract class Payment{
 
     private void authenticateSenderAccount(Account senderAccount, Account receiverAccount, Booking booking) {
 
-        int transferAmount = booking.getCosts();
+        this.transferAmount = booking.getCosts();
         int currentSenderBalance = senderAccount.getCurrencyAmount().getAmount();
         int currentReceiverBalance = receiverAccount.getCurrencyAmount().getAmount();
 
@@ -40,5 +47,15 @@ public abstract class Payment{
                 %n""",senderAccount.getName(),currentSenderBalance,receiverAccount.getName(),currentReceiverBalance);
     }
 
+    public int getTransferAmount() {
+        return transferAmount;
+    }
 
+    public int getPaymentMonth() {
+        return PaymentMonth;
+    }
+
+    public int getPaymentYear() {
+        return PaymentYear;
+    }
 }
