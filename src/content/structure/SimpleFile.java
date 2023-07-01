@@ -1,17 +1,17 @@
 package content.structure;
 
-public class SimpleContent extends Content{
+public class SimpleFile extends File{
 
     private int amount;
 
-    public SimpleContent(String name, int month, int year, int amount) {
+    public SimpleFile(String name, int month, int year, int amount) {
         super(name, month, year);
         this.amount = amount;
     }
 
     @Override
     public void addContent(Content content) {
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException("Cannot add content to File");
     }
 
     @Override
@@ -21,6 +21,6 @@ public class SimpleContent extends Content{
 
     @Override
     public String printStructure(String prefix) {
-        return prefix + "- File: " + name + "\n";
+        return prefix + "- File: " + name + ": " + "Date: " + month + "." + year + " Amount: " + amount + "\n";
     }
 }

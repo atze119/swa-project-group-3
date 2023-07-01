@@ -8,11 +8,14 @@ import java.util.Date;
 public abstract class Payment{
 
     private int transferAmount;
-    private int PaymentMonth;
-    private int PaymentYear;
+    private int paymentMonth;
+    private int paymentYear;
+
+    private int paymentId;
     public void processPayment(Account senderAccount, Account receiverAccount, Booking booking){
-        this.PaymentMonth = booking.randomBookingMonth();
-        this.PaymentYear = 2023;
+        this.paymentMonth = booking.randomBookingMonth();
+        this.paymentYear = 2023;
+        this.paymentId = IdGenerator.getNextId();
         authenticateSenderAccount(senderAccount, receiverAccount, booking);
         currencyAmountFromSenderToReceiver(senderAccount, receiverAccount, booking);
         createPaymentConfirmation(senderAccount, receiverAccount);
@@ -50,12 +53,11 @@ public abstract class Payment{
     public int getTransferAmount() {
         return transferAmount;
     }
-
     public int getPaymentMonth() {
-        return PaymentMonth;
+        return paymentMonth;
     }
-
     public int getPaymentYear() {
-        return PaymentYear;
+        return paymentYear;
     }
+    public int getPaymentId(){return paymentId;}
 }

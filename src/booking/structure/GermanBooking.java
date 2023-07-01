@@ -5,13 +5,15 @@ import java.util.Random;
 public class GermanBooking implements Booking {
     private final String head, body;
     private final int footer;
-
     private int bookingMonth;
     private int bookingYear = 2023;
+
+    private int bookingId;
     public GermanBooking(String head, String body, int footer) {
         this.head = head;
         this.body = body;
         this.footer = footer;
+        this.bookingId = IdGenerator.getNextId();
     }
 
     @Override
@@ -32,6 +34,11 @@ public class GermanBooking implements Booking {
         Random random = new Random();
         this.bookingMonth = random.nextInt(12) + 1;
         return bookingMonth;
+    }
+
+    @Override
+    public int getBookingId() {
+        return this.bookingId;
     }
 
     @Override

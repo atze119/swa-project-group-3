@@ -9,10 +9,13 @@ public class EnglishBooking implements Booking {
     private int bookingMonth;
     private int bookingYear = 2023;
 
+    private int bookingID;
+
     public EnglishBooking(String head, String body, int footer) {
         this.head = head;
         this.body = body;
         this.footer = footer;
+        this.bookingID = IdGenerator.getNextId();
     }
     public void printBooking() {
         System.out.printf("""
@@ -31,6 +34,11 @@ public class EnglishBooking implements Booking {
         Random random = new Random();
         this.bookingMonth = random.nextInt(12) + 1;
         return bookingMonth;
+    }
+
+    @Override
+    public int getBookingId() {
+        return this.bookingID;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package content.structure;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Folder extends Content {
@@ -9,11 +10,11 @@ public class Folder extends Content {
 
     public Folder(String name, int month, int year) {
         super(name, month, year);
-        this.contents = new HashMap<>();
+        this.contents = new LinkedHashMap<>();
     }
     public Folder(String name) {
         super(name, 0, 0);
-        this.contents = new HashMap<>();
+        this.contents = new LinkedHashMap<>();
     }
 
     public Content getSubFolder(String name){

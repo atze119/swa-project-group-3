@@ -6,47 +6,54 @@ import payment.structure.Payment;
 
 public class ContentService {
 
+    //TODO  Change int month and int year to different type: e.g.: LocalDate  (change starts in booking and payment)
+
     private Folder root;
+    private int paymentId = 1;
 
     public ContentService(){
-        root = new Folder("content",6,2023);
-        root.addContent(new Folder("Booking",6,2023));
-        root.addContent(new Folder("Payment",6,2023));
+        root = new Folder("Content",7,2023);
+        root.addContent(new Folder("Booking",7,2023));
+        root.addContent(new Folder("Payment",7,2023));
     }
 
     public void addContent(Booking booking, Payment payment) {
+
         Folder bookingFolder = getOrCreateFolder(root, "Booking");
         Folder bookingYearFolder = getOrCreateFolder(bookingFolder, "Year " + booking.getBookingYear());
         Folder bookingMonthFolder = getOrCreateFolder(bookingYearFolder, "Month " + booking.getBookingMonth());
 
-        SimpleContent bookingContent = new SimpleContent("Booking", booking.getBookingMonth(), booking.getBookingYear(), booking.getCosts());
-        bookingMonthFolder.addContent(bookingContent);
+        SimpleFile bookingFile = new SimpleFile("Booking-"+booking.getBookingId(), booking.getBookingMonth(), booking.getBookingYear(), booking.getCosts());
+        bookingMonthFolder.addContent(bookingFile);
 
         Folder paymentFolder = getOrCreateFolder(root, "Payment");
         Folder paymentYearFolder = getOrCreateFolder(paymentFolder, "Year " + payment.getPaymentYear());
         Folder paymentMonthFolder = getOrCreateFolder(paymentYearFolder, "Month " + payment.getPaymentMonth());
 
-        SimpleContent paymentContent = new SimpleContent("Payment", payment.getPaymentMonth(), payment.getPaymentYear(), payment.getTransferAmount());
-        paymentMonthFolder.addContent(paymentContent);
+        SimpleFile paymentFile = new SimpleFile("Payment-"+payment.getPaymentId(), payment.getPaymentMonth(), payment.getPaymentYear(), payment.getTransferAmount());
+        paymentMonthFolder.addContent(paymentFile);
+        paymentId++;
 
-        File summaryFile = (File) root.getSubFolder("Summary");
+        Content content = root.getSubFolder("Summary");
 
-        if (summaryFile == null) {
-            summaryFile = new File("Summary");
-            root.addContent(summaryFile);
+        if(content instanceof SummaryFile || content == null) {
+            SummaryFile summaryFile = (SummaryFile) content;
+            if (summaryFile == null) {
+                summaryFile = new SummaryFile("Summary");
+                root.addContent(summaryFile);
+            }
+            summaryFile.addAmount(booking.getCosts(), payment.getTransferAmount());
+            summaryFile.addBooking(booking);
+            summaryFile.addPayment(payment);
         }
-
-        summaryFile.addAmount(booking.getCosts(), payment.getTransferAmount());
     }
 
     private Folder getOrCreateFolder(Folder parentFolder, String name){
         Folder folder = (Folder) parentFolder.getSubFolder(name);
-
         if (folder == null) {
             folder = new Folder(name);
             parentFolder.addContent(folder);
         }
-
         return folder;
     }
 

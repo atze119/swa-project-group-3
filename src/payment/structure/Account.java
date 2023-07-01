@@ -21,7 +21,5 @@ public class Account {
 
     public void setCurrencyAmount(CurrencyAmount currencyAmount) {
         this.currencyAmount = currencyAmount;
-
-
     }
 }
