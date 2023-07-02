@@ -1,15 +1,12 @@
 package content.behaviour;
 
 import booking.structure.Booking;
-import content.structure.Content;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import payment.structure.Account;
 import payment.structure.Payment;
-
-import static org.junit.jupiter.api.Assertions.*;
+import statistics.structure.Visitor;
 
 class ContentServiceTest {
 
@@ -24,7 +21,7 @@ class ContentServiceTest {
     @Test
     void addContent() {
 
-        Booking bookingDummy = new Booking() {
+        Booking bookingDummy = new Booking() { //TODO warum getBookingId nicht implementiert?
             @Override
             public void printBooking() {
             }
@@ -48,9 +45,16 @@ class ContentServiceTest {
             public int randomBookingMonth() {
                 return 0;
             }
+
         };
 
         Payment paymentDummy = new Payment() {
+            //TODO visitor pattern changes in line 56-59
+            @Override
+            public void accept(Visitor visitor) {
+
+            }
+
             @Override
             protected void currencyAmountFromSenderToReceiver(Account senderAccount, Account receiverAccount, Booking booking) {
 

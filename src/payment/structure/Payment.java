@@ -1,12 +1,12 @@
 package payment.structure;
 
 import booking.structure.Booking;
-import person.structure.Person;
-
-import java.util.Date;
+import statistics.structure.Visitor;
 
 public abstract class Payment{
 
+    //TODO visitor pattern changes in line 12
+    public abstract void accept(Visitor visitor);
     private int transferAmount;
     private int paymentMonth;
     private int paymentYear;

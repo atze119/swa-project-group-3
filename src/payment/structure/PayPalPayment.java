@@ -1,10 +1,14 @@
 package payment.structure;
 
 import booking.structure.Booking;
-import person.structure.Person;
+import statistics.structure.Visitor;
 
 public class PayPalPayment extends Payment {
 
+    //TODO visitor pattern changes in line 10-12
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
     @Override
     protected void currencyAmountFromSenderToReceiver(Account senderAccount, Account receiverAccount, Booking booking) {
 
