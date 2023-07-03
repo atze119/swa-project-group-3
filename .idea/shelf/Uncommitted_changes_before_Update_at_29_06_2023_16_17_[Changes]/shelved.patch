@@ -1,0 +1,113 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"56dbbbed-8aba-453c-95dd-68cf36d6bc5a\" name=\"Changes\" comment=\"continued payment, but account is still buggy\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/payment/behaviour/PaymentService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/payment/behaviour/PaymentService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/payment/structure/CurrencyAmount.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/payment/structure/CurrencyAmount.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/payment/structure/PayPalPayment.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/payment/structure/PayPalPayment.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/payment/structure/Payment.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/payment/structure/Payment.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"authentication_person_booking_resource_payment\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2QHXywCZLoVBdlmxeepiiP8gSWf\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,\r\n    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"payment.behaviour\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.PaymentServiceTest.payAmount\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"swa-project-group-3\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"PaymentServiceTest.payAmount\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"swa-project-group-3\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"payment.behaviour.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"payment.behaviour\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"payment.behaviour.PaymentServiceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"payAmount\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ResourceServiceTest.getSelectedResource\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"swa-project-group-3\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"resource.behaviour.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"resource.behaviour\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"resource.behaviour.ResourceServiceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"getSelectedResource\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.PaymentServiceTest.payAmount\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"JUnit.ResourceServiceTest.getSelectedResource\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"56dbbbed-8aba-453c-95dd-68cf36d6bc5a\" name=\"Changes\" comment=\"\" />\r\n      <created>1685011745875</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1685011745875</updated>\r\n      <workItem from=\"1685011748230\" duration=\"1349000\" />\r\n      <workItem from=\"1687520839738\" duration=\"916000\" />\r\n      <workItem from=\"1687806065739\" duration=\"6890000\" />\r\n      <workItem from=\"1687858100386\" duration=\"1832000\" />\r\n      <workItem from=\"1687861035632\" duration=\"12775000\" />\r\n      <workItem from=\"1687889911282\" duration=\"3507000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Create Structure\">\r\n      <created>1685012362808</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685012362808</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Create Structure\">\r\n      <created>1685012634144</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685012634144</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Create Structure\">\r\n      <created>1685012761137</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685012761137</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"continued payment, but account is still buggy\">\r\n      <created>1687875854919</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687875854919</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"HEAD\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"HEAD\" />\r\n                </option>\r\n              </RecentGroup>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"master\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Create Structure\" />\r\n    <MESSAGE value=\"continued payment, but account is still buggy\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"continued payment, but account is still buggy\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 9ca94d2d67ae47c2c18ca659336c418476a4d750)
++++ b/.idea/workspace.xml	(date 1688036945779)
+@@ -4,16 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="continued payment, but account is still buggy">
++    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource....">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/payment/behaviour/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/behaviour/PaymentService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/payment/structure/CurrencyAmount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/CurrencyAmount.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/payment/structure/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/Payment.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -47,22 +39,26 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "dart.analysis.tool.window.visible": "false",
++    "last_opened_file_path": "C:/Users/Movitz/IdeaProjects/K-Means_new",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0",
++    "settings.editor.selected.configurable": "preferences.keymap",
++    "show.migrate.to.gradle.popup": "false"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyClassDialog.RECENTS_KEY">
+       <recent name="payment.behaviour" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="JUnit.PaymentServiceTest.payAmount">
++  <component name="RunManager" selected="Application.Main">
+     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Main" />
+       <module name="swa-project-group-3" />
+@@ -104,8 +100,8 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="JUnit.PaymentServiceTest.payAmount" />
+         <item itemvalue="Application.Main" />
++        <item itemvalue="JUnit.PaymentServiceTest.payAmount" />
+         <item itemvalue="JUnit.ResourceServiceTest.getSelectedResource" />
+       </list>
+     </recent_temporary>
+@@ -123,7 +119,10 @@
+       <workItem from="1687806065739" duration="6890000" />
+       <workItem from="1687858100386" duration="1832000" />
+       <workItem from="1687861035632" duration="12775000" />
+-      <workItem from="1687889911282" duration="3507000" />
++      <workItem from="1687889911282" duration="3973000" />
++      <workItem from="1687954530771" duration="4610000" />
++      <workItem from="1688032765263" duration="1296000" />
++      <workItem from="1688036922294" duration="24000" />
+     </task>
+     <task id="LOCAL-00001" summary="Create Structure">
+       <created>1685012362808</created>
+@@ -153,7 +152,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1687875854919</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource....">
++      <created>1687893708891</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1687893708891</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -205,6 +211,7 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Create Structure" />
+     <MESSAGE value="continued payment, but account is still buggy" />
+-    <option name="LAST_COMMIT_MESSAGE" value="continued payment, but account is still buggy" />
++    <MESSAGE value="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource...." />
++    <option name="LAST_COMMIT_MESSAGE" value="payment is almost ready to launch . . . i guess ?!?! &#10;the latest commit also includes changes that add a price for the resource...." />
+   </component>
+ </project>
+\ No newline at end of file
