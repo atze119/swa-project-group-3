@@ -1,0 +1,276 @@
+Index: src/person/structure/PersonFactory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package person.structure;\r\n\r\nimport java.util.Scanner;\r\n\r\npublic class PersonFactory {\r\n    public Person create(PersonType personType) {\r\n        Person person;\r\n        Scanner sc = new Scanner(System.in);\r\n        switch (personType) {\r\n            case NATURAL_PERSON:\r\n                System.out.println(\"What is your First- and Lastname?\");\r\n                String firstName = sc.next();\r\n                String lastName = sc.next(); // TODO implement if else to check if input is valid\r\n                boolean correctInput = false;\r\n                boolean age = false;\r\n                while (!correctInput) {\r\n                    System.out.println(\"Are you older than 21? Yes [Y] | No [N]\");\r\n                    String validAge = sc.next();\r\n                    if (!validAge.equals(\"Y\") && !validAge.equals(\"N\")) {\r\n                        System.out.println(\"Please input a valid character!\");\r\n                    } else if (validAge.equals(\"Y\")) {\r\n                        age = true;\r\n                        correctInput = true;\r\n                    } else {\r\n                        System.out.println(\"Sorry you are to young for our service.\");\r\n                        return null;  // return null because we test if the return value (person) == null\r\n                    }\r\n                }\r\n                correctInput = false;\r\n                boolean licenseAge = false;\r\n                while(!correctInput) {\r\n                    System.out.println(\"Do you have your driver's license since 3 years? Yes [Y] | No [N]\");\r\n                    String validLicenseAge = sc.next();\r\n                    if (!validLicenseAge.equals(\"Y\") && !validLicenseAge.equals(\"N\")) {\r\n                        System.out.println(\"Please input a valid character!\");\r\n                    } else if (validLicenseAge.equals(\"Y\")) {\r\n                        licenseAge = true;\r\n                        correctInput = true;\r\n                    } else {\r\n                        System.out.println(\"Sorry thats not long enough for our service.\");\r\n                        return null;\r\n                    }\r\n                }\r\n                person = new NaturalPerson(firstName, lastName, age, licenseAge);\r\n                break;\r\n            case LEGAL_PERSON:\r\n                System.out.println(\"What is the name of your company?\");\r\n                String companyName = sc.nextLine();\r\n                person = new LegalPerson(companyName);\r\n                break;\r\n            default:\r\n                throw new IllegalArgumentException(\"Unexpected Value: \" + personType);\r\n        }\r\n        return person;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/person/structure/PersonFactory.java b/src/person/structure/PersonFactory.java
+--- a/src/person/structure/PersonFactory.java	(revision 66a2a9b5e8867cbe57dfc71bd271adeccf71ec2a)
++++ b/src/person/structure/PersonFactory.java	(date 1688048425857)
+@@ -10,7 +10,7 @@
+             case NATURAL_PERSON:
+                 System.out.println("What is your First- and Lastname?");
+                 String firstName = sc.next();
+-                String lastName = sc.next(); // TODO implement if else to check if input is valid
++                String lastName = sc.next();
+                 boolean correctInput = false;
+                 boolean age = false;
+                 while (!correctInput) {
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_18\" default=\"true\" project-jdk-name=\"19\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 66a2a9b5e8867cbe57dfc71bd271adeccf71ec2a)
++++ b/.idea/misc.xml	(date 1688048427152)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"56dbbbed-8aba-453c-95dd-68cf36d6bc5a\" name=\"Changes\" comment=\"started adding check cases for valid input and changed input from true or false to [Y] [N]\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/person/behaviour/PersonService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/person/behaviour/PersonService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/person/structure/PersonFactory.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/person/structure/PersonFactory.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"JUnit5 Test Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"refinement\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2QHXywCZLoVBdlmxeepiiP8gSWf\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,\r\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,\r\n    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/fynnj/IdeaProjects/Java_ist_auch_eine_Insel&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateTestDialog.Recents.Supers\">\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.RecentsKey\">\r\n      <recent name=\"booking.behaviour\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.PersonServiceTest.createPerson\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"swa-project-group-3\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"PersonServiceTest.createPerson\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"swa-project-group-3\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"PersonServiceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"createPerson\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ResourceServiceTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"swa-project-group-3\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"resource.behaviour.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"resource.behaviour\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"resource.behaviour.ResourceServiceTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.Main\" />\r\n      <item itemvalue=\"JUnit.PersonServiceTest.createPerson\" />\r\n      <item itemvalue=\"JUnit.ResourceServiceTest\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.PersonServiceTest.createPerson\" />\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"JUnit.ResourceServiceTest\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"56dbbbed-8aba-453c-95dd-68cf36d6bc5a\" name=\"Changes\" comment=\"\" />\r\n      <created>1685011745875</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1685011745875</updated>\r\n      <workItem from=\"1685011748230\" duration=\"1349000\" />\r\n      <workItem from=\"1687954649032\" duration=\"912000\" />\r\n      <workItem from=\"1687969037044\" duration=\"314000\" />\r\n      <workItem from=\"1687988609121\" duration=\"3476000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Create Structure\">\r\n      <created>1685012362808</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685012362808</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Create Structure\">\r\n      <created>1685012634144</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685012634144</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Create Structure\">\r\n      <created>1685012761137</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685012761137</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Added authentication, person, booking, resource\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1687515259147</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687515259148</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"started adding check cases for valid input and changed input from true or false to [Y] [N]\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1687990484953</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687990484953</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"master\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/refinement\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Create Structure\" />\r\n    <MESSAGE value=\"Added authentication, person, booking, resource\" />\r\n    <MESSAGE value=\"implemented Booking with Builder Pattern and merged person, resource and booking\" />\r\n    <MESSAGE value=\"started adding check cases for valid input and changed input from true or false to [Y] [N]\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"started adding check cases for valid input and changed input from true or false to [Y] [N]\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 66a2a9b5e8867cbe57dfc71bd271adeccf71ec2a)
++++ b/.idea/workspace.xml	(date 1688048725700)
+@@ -4,9 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="started adding check cases for valid input and changed input from true or false to [Y] [N]">
++    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="continued payment, but account is still buggy">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/person/behaviour/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/behaviour/PersonService.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/person/structure/PersonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/structure/PersonFactory.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -17,16 +17,15 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
++        <option value="Enum" />
+         <option value="Class" />
+-        <option value="Interface" />
+-        <option value="JUnit5 Test Class" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="refinement" />
++        <entry key="$PROJECT_DIR$" value="authentication_person_booking_resource_payment" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -47,27 +46,17 @@
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/fynnj/IdeaProjects/Java_ist_auch_eine_Insel&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
++    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+   }
+ }</component>
+   <component name="RecentsManager">
+-    <key name="CreateTestDialog.Recents.Supers">
+-      <recent name="" />
+-    </key>
+-    <key name="CreateTestDialog.RecentsKey">
+-      <recent name="booking.behaviour" />
++    <key name="CopyClassDialog.RECENTS_KEY">
++      <recent name="payment.behaviour" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="JUnit.PersonServiceTest.createPerson">
++  <component name="RunManager" selected="JUnit.PaymentServiceTest.payAmount">
+     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Main" />
+       <module name="swa-project-group-3" />
+@@ -75,17 +64,23 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="PersonServiceTest.createPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="PaymentServiceTest.payAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="swa-project-group-3" />
+-      <option name="PACKAGE_NAME" value="" />
+-      <option name="MAIN_CLASS_NAME" value="PersonServiceTest" />
+-      <option name="METHOD_NAME" value="createPerson" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="payment.behaviour.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="payment.behaviour" />
++      <option name="MAIN_CLASS_NAME" value="payment.behaviour.PaymentServiceTest" />
++      <option name="METHOD_NAME" value="payAmount" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="ResourceServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="ResourceServiceTest.getSelectedResource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="swa-project-group-3" />
+       <extension name="coverage">
+         <pattern>
+@@ -95,21 +90,17 @@
+       </extension>
+       <option name="PACKAGE_NAME" value="resource.behaviour" />
+       <option name="MAIN_CLASS_NAME" value="resource.behaviour.ResourceServiceTest" />
+-      <option name="TEST_OBJECT" value="class" />
++      <option name="METHOD_NAME" value="getSelectedResource" />
++      <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <list>
+-      <item itemvalue="Application.Main" />
+-      <item itemvalue="JUnit.PersonServiceTest.createPerson" />
+-      <item itemvalue="JUnit.ResourceServiceTest" />
+-    </list>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="JUnit.PersonServiceTest.createPerson" />
++        <item itemvalue="JUnit.PaymentServiceTest.payAmount" />
+         <item itemvalue="Application.Main" />
+-        <item itemvalue="JUnit.ResourceServiceTest" />
++        <item itemvalue="JUnit.ResourceServiceTest.getSelectedResource" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -122,9 +113,11 @@
+       <option name="presentableId" value="Default" />
+       <updated>1685011745875</updated>
+       <workItem from="1685011748230" duration="1349000" />
+-      <workItem from="1687954649032" duration="912000" />
+-      <workItem from="1687969037044" duration="314000" />
+-      <workItem from="1687988609121" duration="3476000" />
++      <workItem from="1687520839738" duration="916000" />
++      <workItem from="1687806065739" duration="6890000" />
++      <workItem from="1687858100386" duration="1832000" />
++      <workItem from="1687861035632" duration="12775000" />
++      <workItem from="1687889911282" duration="3507000" />
+     </task>
+     <task id="LOCAL-00001" summary="Create Structure">
+       <created>1685012362808</created>
+@@ -147,44 +140,20 @@
+       <option name="project" value="LOCAL" />
+       <updated>1685012761137</updated>
+     </task>
+-    <task id="LOCAL-00004" summary="Added authentication, person, booking, resource">
+-      <option name="closed" value="true" />
+-      <created>1687515259147</created>
++    <task id="LOCAL-00004" summary="continued payment, but account is still buggy">
++      <created>1687875854919</created>
+       <option name="number" value="00004" />
+       <option name="presentableId" value="LOCAL-00004" />
+       <option name="project" value="LOCAL" />
+-      <updated>1687515259148</updated>
++      <updated>1687875854919</updated>
+     </task>
+-    <task id="LOCAL-00005" summary="started adding check cases for valid input and changed input from true or false to [Y] [N]">
+-      <option name="closed" value="true" />
+-      <created>1687990484953</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1687990484953</updated>
+-    </task>
+-    <option name="localTasksCounter" value="6" />
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+-    <option name="RECENT_FILTERS">
+-      <map>
+-        <entry key="Branch">
+-          <value>
+-            <list>
+-              <RecentGroup>
+-                <option name="FILTER_VALUES">
+-                  <option value="master" />
+-                </option>
+-              </RecentGroup>
+-            </list>
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+     <option name="TAB_STATES">
+       <map>
+         <entry key="MAIN">
+@@ -195,7 +164,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="origin/refinement" />
++                        <option value="HEAD" />
+                       </list>
+                     </value>
+                   </entry>
+@@ -206,12 +175,30 @@
+         </entry>
+       </map>
+     </option>
++    <option name="RECENT_FILTERS">
++      <map>
++        <entry key="Branch">
++          <value>
++            <list>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="HEAD" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="master" />
++                </option>
++              </RecentGroup>
++            </list>
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Create Structure" />
+-    <MESSAGE value="Added authentication, person, booking, resource" />
+-    <MESSAGE value="implemented Booking with Builder Pattern and merged person, resource and booking" />
+-    <MESSAGE value="started adding check cases for valid input and changed input from true or false to [Y] [N]" />
+-    <option name="LAST_COMMIT_MESSAGE" value="started adding check cases for valid input and changed input from true or false to [Y] [N]" />
++    <MESSAGE value="continued payment, but account is still buggy" />
++    <option name="LAST_COMMIT_MESSAGE" value="continued payment, but account is still buggy" />
+   </component>
+ </project>
+\ No newline at end of file

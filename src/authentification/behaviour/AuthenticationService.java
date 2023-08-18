@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class AuthenticationService {
 
-    public Credential authenticateSubject(Person subject) {
-        Credential credential;
+    public Credential authenticateSubject(Person subject) {    //Subject als Fachtyp eigene Klasse?
+        Credential credential = null;
         if (subject instanceof NaturalPerson) {
             System.out.println("""
                     Choose between Username-Password-Strategy: 1
@@ -17,15 +17,21 @@ public class AuthenticationService {
                     Eye-Scan-Strategy: 3
                     """);
             Scanner sc = new Scanner(System.in);
-            int credentialType = sc.nextInt();
-
-            credential = switch (credentialType) {
-                case 1 -> new UserNamePasswordStrategy();
-                case 2 -> new FingerPrintStrategy();
-                case 3 -> new EyeScanStrategy();
-                default -> throw new IllegalArgumentException("Unexpected value: " + credentialType);
-            };
-
+            boolean validInput = false;
+            while (!validInput) {
+                int credentialType = sc.nextInt();
+                if (credentialType < 1 || credentialType > 3) {
+                    System.out.println("Please input a valid number between 1 and 3! ");
+                } else {
+                    credential = switch (credentialType) {
+                        case 1 -> new UserNamePasswordStrategy();
+                        case 2 -> new FingerPrintStrategy();
+                        case 3 -> new EyeScanStrategy();
+                        default -> throw new IllegalArgumentException("Unexpected value: " + credentialType);
+                    };
+                    validInput = true;
+                }
+            }
         } else {
             credential = new ValidationCodeStrategy();
             // At this point Legal person has only one strategy

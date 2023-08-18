@@ -24,11 +24,7 @@ class PersonServiceTest {
         // TODO change VM https://stackoverflow.com/questions/38482844/reading-system-in-from-the-console-using-intellij-and-junit
     @Test
     void createPerson() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please choose between the following two types: 'LEGAL_PERSON', 'NATURAL_PERSON'");
-        //PersonService personService = new PersonService(); when static stays
-        personType = PersonType.valueOf(sc.next());
-        person = PersonService.createPerson(personType);
+        person = PersonService.createPerson();
         Assertions.assertNotNull(person);
     }
 }
