@@ -46,6 +46,9 @@ class ContentServiceTest {
                 return 0;
             }
 
+            @Override
+            public int getBookingId() { return 3; }
+
         };
 
         Payment paymentDummy = new Payment() {
