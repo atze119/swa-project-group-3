@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="optimize dialog outputs; replacing &quot;equals&quot; usage with &quot;matches&quot; usage to clean up code; fixed code issue that lead into redundant question output when typing in wrong character at question &quot;Is your Data correct?&quot;" />
+    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="xml changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/behaviour/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/behaviour/PersonService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -241,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692365017624</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="xml changes">
+      <created>1692366457355</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1692366457355</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +304,7 @@
     <MESSAGE value="Payment and person are now connected; please check if this is correct and good" />
     <MESSAGE value="Content is almost ready. Some small but complicated bugs are still there... basic impl of month and year int for booking and payment.. so we can store them in folders (content)" />
     <MESSAGE value="optimize dialog outputs; replacing &quot;equals&quot; usage with &quot;matches&quot; usage to clean up code; fixed code issue that lead into redundant question output when typing in wrong character at question &quot;Is your Data correct?&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimize dialog outputs; replacing &quot;equals&quot; usage with &quot;matches&quot; usage to clean up code; fixed code issue that lead into redundant question output when typing in wrong character at question &quot;Is your Data correct?&quot;" />
+    <MESSAGE value="xml changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml changes" />
   </component>
 </project>

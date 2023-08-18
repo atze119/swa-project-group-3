@@ -18,7 +18,7 @@ public class PersonService {
             while (!correctInput) {
                 System.out.println("""
                 Please choose between the following two types:
-                Legal Person [L] | Natural Person [N]:
+                Legal Person [L] | Natural Person [N]
                 """);
                 String userInput = sc.next();
                 if (!userInput.matches("N|n|L|l")) {
