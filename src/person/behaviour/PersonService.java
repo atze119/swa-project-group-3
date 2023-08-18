@@ -21,10 +21,10 @@ public class PersonService {
                 Legal Person [L] | Natural Person [N]:
                 """);
                 String userInput = sc.next();
-                if (!userInput.equals("N") && !userInput.equals("L")) {
-                    System.out.println("Please input a valid character! [Y] | [N]");
+                if (!userInput.matches("N|n|L|l")) {
+                    System.out.println("Please input a valid character! [L] | [N]");
                 } else {
-                    personType = userInput.equals("N") ? PersonType.NATURAL_PERSON : PersonType.LEGAL_PERSON;
+                    personType = userInput.matches("N|n") ? PersonType.NATURAL_PERSON : PersonType.LEGAL_PERSON;
                     correctInput = true;
                 }
             }
@@ -32,16 +32,16 @@ public class PersonService {
             person = personFactory.create(personType);
             if (person != null) {
                 correctInput = false;
+                System.out.println();
+                System.out.println("Printing Information!");
+                person.printInformation();
+                System.out.println("Is your Data correct? Yes [Y] | No [N]");
+                System.out.println();
                 while (!correctInput) {
-                    System.out.println();
-                    System.out.println("Printing Information!");
-                    person.printInformation();
-                    System.out.println("Is your Data correct? Yes [Y] | No [N]");
-                    System.out.println();
                     String validData = sc.next();
-                    if (!validData.equals("Y") && !validData.equals("N")) {
+                    if (!validData.matches("Y|y|N|n")) {
                         System.out.println("Please input a valid character! [Y] | [N]");
-                    } else if (validData.equals("Y")) {
+                    } else if (validData.matches("Y|y")) {
                         correctData = true;
                         correctInput = true;
                     }

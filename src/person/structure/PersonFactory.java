@@ -8,17 +8,18 @@ public class PersonFactory {
         Scanner sc = new Scanner(System.in);
         switch (personType) {
             case NATURAL_PERSON -> {
-                System.out.println("What is your First- and Lastname?");
+                System.out.println("What is your firstname?");
                 String firstName = sc.next();
+                System.out.println("What is your lastname?");
                 String lastName = sc.next();
                 boolean correctInput = false;
                 boolean age = false;
                 while (!correctInput) {
                     System.out.println("Are you older than 21? Yes [Y] | No [N]");
                     String validAge = sc.next();
-                    if (!validAge.equals("Y") && !validAge.equals("N")) {
+                    if (!validAge.matches("Y|y|N|n")) {
                         System.out.println("Please input a valid character! [Y] | [N]");
-                    } else if (validAge.equals("Y")) {
+                    } else if (validAge.matches("Y|y")) {
                         age = true;
                         correctInput = true;
                     } else {
@@ -31,9 +32,9 @@ public class PersonFactory {
                 while (!correctInput) {
                     System.out.println("Do you have your driver's license since 3 years? Yes [Y] | No [N]");
                     String validLicenseAge = sc.next();
-                    if (!validLicenseAge.equals("Y") && !validLicenseAge.equals("N")) {
+                    if (!validLicenseAge.matches("Y|y|N|n")) {
                         System.out.println("Please input a valid character! [Y] | [N]");
-                    } else if (validLicenseAge.equals("Y")) {
+                    } else if (validLicenseAge.matches("Y|y")) {
                         licenseAge = true;
                         correctInput = true;
                     } else {

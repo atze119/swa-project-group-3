@@ -18,9 +18,9 @@ public class BookingService {
         while (!validInput) {
             System.out.println("Do you want to get your booking in german or english? German [G] | English [E]");
             String userInput = sc.next();
-            if (!userInput.equals("G") && !userInput.equals("E")) {
-                System.out.println("Please input a valid character! [Y] | [N]");
-            } else if (userInput.equals("G")) {
+            if (!userInput.matches("G|g|E|e")) {
+                System.out.println("Please input a valid character! [G] | [E]");
+            } else if (userInput.matches("G|g")) {
                 GermanBooking germanBooking = new BookingBuilder()
                         .head(person.getName()) // maybe input Person.getName
                         .body(resource.getResource()) // TODO resources are in english
