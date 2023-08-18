@@ -15,10 +15,11 @@ public class GoogleWalletPayment extends Payment {
         int senderBalanceOld = senderAccount.getCurrencyAmount().getAmount();
         int receiverBalanceOld = receiverAccount.getCurrencyAmount().getAmount();
 
-        if(senderBalanceOld >= transferAmount){
+        if(senderBalanceOld >= transferAmount) {
             senderAccount.getCurrencyAmount().setAmount(senderBalanceOld-transferAmount);
             receiverAccount.getCurrencyAmount().setAmount(receiverBalanceOld+transferAmount);
-        }else{
+        }
+        else {
             throw new IllegalStateException("Sender does not have enough balance for transaction");
         }
         int senderBalanceNew = senderAccount.getCurrencyAmount().getAmount();

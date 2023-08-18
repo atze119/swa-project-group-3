@@ -56,6 +56,9 @@ class PaymentServiceTest {
                 public int randomBookingMonth() {
                     return 0;
                 }
+
+                @Override
+                public int getBookingId() { return 3; }
             };
             Person persondummy = new Person() {
                 @Override
