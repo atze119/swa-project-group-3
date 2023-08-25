@@ -8,7 +8,7 @@ public class ContentService {
 
     //TODO  Change int month and int year to different type: e.g.: LocalDate  (change starts in booking and payment)
 
-    private Folder root;
+    private final Folder root;
     private int paymentId = 1;
 
     public ContentService(){

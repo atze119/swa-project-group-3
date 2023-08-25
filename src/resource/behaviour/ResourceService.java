@@ -36,10 +36,10 @@ public class ResourceService { // Car == the main Resource
             System.out.println("If everything is right input [Y] for Yes if not input [N] for No to start the selection again:");
             boolean validInput = false;
             while (!validInput) {
-                String checkUserInput = sc.next();
-                if (!checkUserInput.equals("Y") && !checkUserInput.equals("N")) {
+                String validData = sc.next();
+                if (!validData.matches("Y|y|N|n")) {
                     System.out.println("Please input a valid character! [Y] | [N]");
-                } else if (checkUserInput.equals("Y")){
+                } else if (validData.matches("Y|y")){
                     userInput = true;
                     validInput = true;
                 } else {
@@ -54,10 +54,10 @@ public class ResourceService { // Car == the main Resource
         Scanner sc = new Scanner(System.in);
         while (true) {
             String userInput = sc.next();
-            if (!userInput.equals("Y") && !userInput.equals("N")) {
+            if (!userInput.matches("Y|y|N|n")) {
                 System.out.println("Please input a valid character! [Y] | [N]");
             } else {
-                return userInput.equals("Y"); // if input == Y return true otherwise false
+                return userInput.matches("Y|y"); // if input == Y return true otherwise false
             }
         }
     }

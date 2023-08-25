@@ -7,7 +7,7 @@ public class MobileMoneyWalletPayment extends Payment {
 
     //TODO visitor pattern changes in line 10-12
     public void accept(Visitor visitor) {
-        visitor.visit(this);
+        visitor.visitMobileMoneyWallet(this);
     }
     @Override
     protected void currencyAmountFromSenderToReceiver(Account senderAccount, Account receiverAccount, Booking booking) {

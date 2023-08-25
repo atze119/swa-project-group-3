@@ -5,9 +5,9 @@ import payment.structure.MobileMoneyWalletPayment;
 import payment.structure.PayPalPayment;
 
 public interface Visitor {
-    void visit(PayPalPayment paypalPayment);
-    void visit(GoogleWalletPayment googleWalletPayment);
-    void visit(MobileMoneyWalletPayment moneyWalletPayment);
+    void visitPayPal(PayPalPayment paypalPayment);
+    void visitGoogleWallet(GoogleWalletPayment googleWalletPayment);
+    void visitMobileMoneyWallet(MobileMoneyWalletPayment moneyWalletPayment);
 
 }
 

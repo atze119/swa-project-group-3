@@ -6,17 +6,18 @@ import payment.behaviour.PaymentService;
 import payment.structure.Payment;
 import person.behaviour.PersonService;
 import person.structure.Person;
-import person.structure.PersonType;
-import resource.behaviour.*;
+import resource.behaviour.ResourceService;
 import resource.structure.Resource;
-
-import java.util.Scanner;
+import statistics.structure.StatisticsVisitor;
 
 public class Main {
     public static void main(String[] args) {
         ContentService contentService = new ContentService();
+        StatisticsVisitor visitor = new StatisticsVisitor();
+        PaymentService paymentService;
+        Payment payment;
         for(int i = 0; i<5;i++) {
-            Scanner sc = new Scanner(System.in);
+            //Scanner sc = new Scanner(System.in);
             //PersonService personService = new PersonService(); when static stays
             Person person = PersonService.createPerson();
             AuthenticationService authenticationService = new AuthenticationService();
@@ -28,12 +29,15 @@ public class Main {
             BookingService bookingService = new BookingService();
             Booking booking = bookingService.createBooking(person, resource);
 
-            PaymentService paymentService = new PaymentService();
-            Payment payment = paymentService.payAmount(booking, person);
-
+            paymentService = new PaymentService();
+            payment = paymentService.payAmount(booking, person);
 
             contentService.addContent(booking, payment);
             contentService.printStructure();
+
+            payment.accept(visitor);
+
         }
+
     }
 }

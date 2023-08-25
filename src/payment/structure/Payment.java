@@ -5,7 +5,7 @@ import statistics.structure.Visitor;
 
 public abstract class Payment{
 
-    //TODO visitor pattern changes in line 12
+    //visitor pattern
     public abstract void accept(Visitor visitor);
     private int transferAmount;
     private int paymentMonth;

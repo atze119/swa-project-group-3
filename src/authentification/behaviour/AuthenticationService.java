@@ -19,15 +19,16 @@ public class AuthenticationService {
             Scanner sc = new Scanner(System.in);
             boolean validInput = false;
             while (!validInput) {
-                int credentialType = sc.nextInt();
-                if (credentialType < 1 || credentialType > 3) {
+                String userInput = sc.next();
+                if (!userInput.matches("1|2|3")) {
                     System.out.println("Please input a valid number between 1 and 3! ");
                 } else {
-                    credential = switch (credentialType) {
+                    int inputToInt = Integer.parseInt(userInput);
+                    credential = switch (inputToInt) {
                         case 1 -> new UserNamePasswordStrategy();
                         case 2 -> new FingerPrintStrategy();
                         case 3 -> new EyeScanStrategy();
-                        default -> throw new IllegalArgumentException("Unexpected value: " + credentialType);
+                        default -> throw new IllegalArgumentException("Unexpected value: " + userInput);
                     };
                     validInput = true;
                 }
