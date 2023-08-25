@@ -7,7 +7,7 @@ import statistics.behavior.StatisticsService;
 import statistics.structure.StatisticsVisitor;
 import statistics.structure.Visitor;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+//import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StatisticsServiceTest {
 
@@ -27,12 +27,10 @@ public class StatisticsServiceTest {
     @Test
     public void testGetGermanBookingsPaidByPayPal() {
         PayPalPayment paypalPayment = new PayPalPayment();
-
         paypalPayment.accept(visitor);
-        // Act
         statisticsService.getGermanBookingsPaidByPayPal();
 
-        //int count = visitor.getPayPalStatistics; //TODO Annahme: getPayPalStatistics gibt die Anzahl der PayPal-Zahlungen zurück
+        //int count = visitor.getPayPalStatistics; //Annahme: getPayPalStatistics gibt die Anzahl der PayPal-Zahlungen zurück
         // Assert
         //int expectedCount = 5; // Erwartete Anzahl von PayPal-Zahlungen
         //assertEquals(expectedCount, count);
@@ -41,11 +39,9 @@ public class StatisticsServiceTest {
     @Test
     public void testGetGermanBookingsPaidByGoogleWallet() {
         GoogleWalletPayment googleWalletPayment  = new GoogleWalletPayment();
-
         googleWalletPayment.accept(visitor);
-        // Act
         statisticsService.getGermanBookingsPaidByGoogleWallet();
-        //int count = visitor.getGoogleWalletStatistics(); //TODO Annahme: getGoogleWalletStatistics gibt die Anzahl der Google Wallet-Zahlungen zurück
+        //int count = visitor.getGoogleWalletStatistics(); //Annahme: getGoogleWalletStatistics gibt die Anzahl der Google Wallet-Zahlungen zurück
         // Assert
         //int expectedCount = 3; // Erwartete Anzahl von Google Wallet-Zahlungen
         //assertEquals(expectedCount, count);
