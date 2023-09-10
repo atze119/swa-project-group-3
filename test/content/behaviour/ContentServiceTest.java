@@ -19,9 +19,9 @@ class ContentServiceTest {
     }
 
     @Test
-    void addContent() {
+    void addContent() { //TODO Test schreiben für Methoden getOrCreateFolder, printStructure
 
-        Booking bookingDummy = new Booking() { //TODO warum getBookingId nicht implementiert?
+        Booking bookingDummy = new Booking() {
             @Override
             public void printBooking() {
             }
@@ -52,7 +52,6 @@ class ContentServiceTest {
         };
 
         Payment paymentDummy = new Payment() {
-            //TODO visitor pattern changes in line 56-59
             @Override
             public void accept(Visitor visitor) {
 

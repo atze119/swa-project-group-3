@@ -21,7 +21,7 @@ public class BookingBuilder {
     public GermanBooking buildGerman() {
         return new GermanBooking(head, body, footer);
     }
-    public EnglishBooking buildEnglish() { // TODO is it allowed to use two build methods?
+    public EnglishBooking buildEnglish() {
         return new EnglishBooking(head, body, footer);
     }
 

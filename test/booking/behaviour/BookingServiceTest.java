@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class BookingServiceTest {
 
+    //TODO Test schreiben für createBooking
     @BeforeEach
     void setUp() {
     }
@@ -21,6 +22,5 @@ class BookingServiceTest {
         bookingService.createBooking(person, resource);
         assertNotNull();
         */
-        // TODO implement Test
     }
 }

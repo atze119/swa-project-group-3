@@ -5,7 +5,6 @@ import statistics.structure.Visitor;
 
 public class PayPalPayment extends Payment {
 
-    //TODO visitor pattern changes in line 10-12
     public void accept(Visitor visitor) {
         visitor.visitPayPal(this);
     }

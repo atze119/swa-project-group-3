@@ -23,8 +23,8 @@ public class AuthenticationService {
                 if (!userInput.matches("1|2|3")) {
                     System.out.println("Please input a valid number between 1 and 3! ");
                 } else {
-                    int inputToInt = Integer.parseInt(userInput);
-                    credential = switch (inputToInt) {
+                    int inputParse = Integer.parseInt(userInput);
+                    credential = switch (inputParse) {
                         case 1 -> new UserNamePasswordStrategy();
                         case 2 -> new FingerPrintStrategy();
                         case 3 -> new EyeScanStrategy();

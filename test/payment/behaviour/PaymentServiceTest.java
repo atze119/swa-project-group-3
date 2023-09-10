@@ -29,8 +29,7 @@ class PaymentServiceTest {
 
 
     void payAmount() {
-        // TODO implement Test
-
+        // TODO create Testobject with some Testdata inside without using existing Classes like Booking
             Booking bookingdummy = new Booking() {
                 @Override
                 public void printBooking() {

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class PersonService {
 
-    public static Person createPerson() { // TODO is static wrong?
+    public static Person createPerson() {
         Person person = null;
         PersonType personType= null;
         boolean correctData = false;
@@ -44,6 +44,8 @@ public class PersonService {
                     } else if (validData.matches("Y|y")) {
                         correctData = true;
                         correctInput = true;
+                    } else {
+                        break;
                     }
                 }
             } else {

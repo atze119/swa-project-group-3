@@ -8,7 +8,7 @@ import statistics.structure.StatisticsVisitor;
 import statistics.structure.Visitor;
 
 //import static org.junit.jupiter.api.Assertions.assertEquals;
-
+//TODO write Test
 public class StatisticsServiceTest {
 
     private StatisticsService statisticsService;

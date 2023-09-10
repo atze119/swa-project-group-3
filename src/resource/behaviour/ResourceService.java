@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class ResourceService { // Car == the main Resource
 
-    // TODO maybe add something more, so you can call the booked resources for example in main class
     private Resource resource;
 
     public Resource getSelectedResource() { // return resource for JUnit test (null testing)
@@ -19,7 +18,7 @@ public class ResourceService { // Car == the main Resource
 
             System.out.println("Do you want do book a Roof-Box to your car?");
             boolean roofBox = bookExtra();
-            //TODO is this the only way? --> maybe better solution?!
+
             if (childSeat && roofBox) {
                 resource = new ChildSeat(new RoofBox(new Car())); // car == the main resource constructor call:
             } else if (childSeat) {                    // specification -> generalization

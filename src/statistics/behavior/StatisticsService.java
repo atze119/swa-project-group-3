@@ -22,6 +22,6 @@ public class StatisticsService {
         // ...
     }
 
-    //TODO Weitere Methoden für andere Kombinationen von Zahlungsmethoden und BookingLanguege
+    //TODO get Methods aus StatisticsVisitor
 }
 

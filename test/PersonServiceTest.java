@@ -21,7 +21,7 @@ class PersonServiceTest {
     static void shutDown() {
 
     }
-        // TODO change VM https://stackoverflow.com/questions/38482844/reading-system-in-from-the-console-using-intellij-and-junit
+        //TODO  write test; change VM https://stackoverflow.com/questions/38482844/reading-system-in-from-the-console-using-intellij-and-junit
     @Test
     void createPerson() {
         person = PersonService.createPerson();

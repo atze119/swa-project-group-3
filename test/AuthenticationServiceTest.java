@@ -21,7 +21,8 @@ class AuthenticationServiceTest {
     static void shutDown() {
 
     }
-        // TODO change VM https://stackoverflow.com/questions/38482844/reading-system-in-from-the-console-using-intellij-and-junit
+        //TODO change VM https://stackoverflow.com/questions/38482844/reading-system-in-from-the-console-using-intellij-and-junit
+        //TODO implement working Test
     @Test
     void authenticateSubject() {
         Person person = null;

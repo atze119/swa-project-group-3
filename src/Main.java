@@ -14,20 +14,28 @@ public class Main {
     public static void main(String[] args) {
         ContentService contentService = new ContentService();
         StatisticsVisitor visitor = new StatisticsVisitor();
+        AuthenticationService authenticationService;
+        BookingService bookingService;
+        Booking booking;
+        ResourceService resourceService;
+        Resource resource;
         PaymentService paymentService;
         Payment payment;
         for(int i = 0; i<5;i++) {
             //Scanner sc = new Scanner(System.in);
             //PersonService personService = new PersonService(); when static stays
             Person person = PersonService.createPerson();
-            AuthenticationService authenticationService = new AuthenticationService();
+            if (person == null) {
+                return;
+            }
+            authenticationService = new AuthenticationService();
             authenticationService.authenticateSubject(person);
 
-            ResourceService resourceService = new ResourceService();
-            Resource resource = resourceService.getSelectedResource();
+            resourceService = new ResourceService();
+            resource = resourceService.getSelectedResource();
 
-            BookingService bookingService = new BookingService();
-            Booking booking = bookingService.createBooking(person, resource);
+            bookingService = new BookingService();
+            booking = bookingService.createBooking(person, resource);
 
             paymentService = new PaymentService();
             payment = paymentService.payAmount(booking, person);
@@ -36,8 +44,8 @@ public class Main {
             contentService.printStructure();
 
             payment.accept(visitor);
-
+        //TODO schleife zu while schleife und per abfrage am Ende Möglichkeit zum Ausbruch haben
         }
-
+        //TODO visitor nach ausbruch aus schleife mit allen payment methods
     }
 }

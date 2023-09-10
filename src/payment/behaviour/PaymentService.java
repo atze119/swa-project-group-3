@@ -27,15 +27,16 @@ public class PaymentService {
         Scanner sc = new Scanner(System.in);
         boolean validInput = false;
         while (!validInput) {
-            int paymentMethod = sc.nextInt();
-            if (paymentMethod < 1 || paymentMethod > 3) {
+            String userInput = sc.next();
+            if (!userInput.matches("1|2|3")) {
                 System.out.println("Please input a valid number between 1 and 3!");
             } else {
-                PaymentType paymentType = switch(paymentMethod){
+                int inputParse = Integer.parseInt(userInput);
+                PaymentType paymentType = switch(inputParse){
                     case 1 -> PaymentType.GOOGLE_WALLET;
                     case 2 -> PaymentType.MOBILE_MONEY_WALLET;
                     case 3 -> PaymentType.PAYPAL;
-                    default -> throw new IllegalStateException("Unexpected value: " + paymentMethod);
+                    default -> throw new IllegalStateException("Unexpected value: " + userInput);
                 };
 
                 payment = switch(paymentType){

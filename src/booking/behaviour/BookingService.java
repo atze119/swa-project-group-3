@@ -15,15 +15,15 @@ public class BookingService {
         Booking booking = null;
         Scanner sc = new Scanner(System.in);
         boolean validInput = false;
+        System.out.println("Do you want to get your booking in german or english? German [G] | English [E]");
         while (!validInput) {
-            System.out.println("Do you want to get your booking in german or english? German [G] | English [E]");
             String userInput = sc.next();
             if (!userInput.matches("G|g|E|e")) {
                 System.out.println("Please input a valid character! [G] | [E]");
             } else if (userInput.matches("G|g")) {
                 GermanBooking germanBooking = new BookingBuilder()
                         .head(person.getName()) // maybe input Person.getName
-                        .body(resource.getResource()) // TODO resources are in english
+                        .body(resource.getResource())
                         .footer(resource.getCosts()) // something
                         .buildGerman();
                 germanBooking.printBooking();
