@@ -4,29 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="fix error when userinput is alphabetic at extra booking.&#10;adjust some statistics visitor pattern things in most classes.&#10;added statistics output in mainclass.">
+    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="comment code adjustments">
+      <change afterPath="$PROJECT_DIR$/test/authentication/behaviour/AuthenticationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_05_2023_13_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_05_2023_13_21__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_05_2023_13_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_05_2023_13_00__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_05_2023_13_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_05_2023_13_33__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/authentification/behaviour/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/authentification/behaviour/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/authentification/structure/FingerPrintStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/authentification/structure/FingerPrintStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/booking/behaviour/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/behaviour/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/booking/structure/BookingBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/structure/BookingBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/behaviour/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/behaviour/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authentification/behaviour/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/authentication/behaviour/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authentification/structure/Credential.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/authentication/structure/Credential.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authentification/structure/EyeScanStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/authentication/structure/EyeScanStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authentification/structure/FingerPrintStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/authentication/structure/FingerPrintStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authentification/structure/UserNamePasswordStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/authentication/structure/UserNamePasswordStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authentification/structure/ValidationCodeStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/authentication/structure/ValidationCodeStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/behaviour/ContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/behaviour/ContentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/structure/SummaryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/structure/SummaryFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/person/behaviour/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/behaviour/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/behaviour/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/behaviour/ResourceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/structure/RoofBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/structure/RoofBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/statistics/behavior/StatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statistics/behavior/StatisticsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/statistics/structure/StatisticsVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statistics/structure/StatisticsVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AuthenticationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/AuthenticationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/PersonServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/PersonServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/StatisticsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/StatisticsServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/structure/PersonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/structure/PersonFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AuthenticationServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/PersonServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/person/behaviour/PersonServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StatisticsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/statistics/behaviour/StatisticsServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/booking/behaviour/BookingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/booking/behaviour/BookingServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/content/behaviour/ContentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/content/behaviour/ContentServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/resource/behaviour/ResourceServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/resource/behaviour/ResourceServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +58,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
   <component name="ProjectId" id="2QHXywCZLoVBdlmxeepiiP8gSWf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -65,33 +69,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Movitz/IdeaProjects/swa-project-group-3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "dart.analysis.tool.window.visible": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Movitz/IdeaProjects/swa-project-group-3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="person.behaviour" />
+      <recent name="authentication.behaviour" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="content.behaviour" />
@@ -102,7 +111,7 @@
       <recent name="payment.structure" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ContentServiceTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="swa-project-group-3" />
@@ -110,11 +119,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookingServiceTest.createLegalPersonBooking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="swa-project-group-3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AuthenticationServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="booking.behaviour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="booking.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="booking.behaviour.BookingServiceTest" />
+      <option name="METHOD_NAME" value="createLegalPersonBooking" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingServiceTest.createLegalPersonGermanBooking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swa-project-group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="booking.behaviour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="booking.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="booking.behaviour.BookingServiceTest" />
+      <option name="METHOD_NAME" value="createLegalPersonGermanBooking" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,50 +166,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContentServiceTest.addContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="swa-project-group-3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="payment.behaviour.*" />
+          <option name="PATTERN" value="content.behaviour.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="payment.behaviour" />
-      <option name="MAIN_CLASS_NAME" value="payment.behaviour.PaymentServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ResourceServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="swa-project-group-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="resource.behaviour.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="resource.behaviour" />
-      <option name="MAIN_CLASS_NAME" value="resource.behaviour.ResourceServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="content.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="content.behaviour.ContentServiceTest" />
+      <option name="METHOD_NAME" value="addContent" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.AuthenticationServiceTest" />
+      <item itemvalue="JUnit.BookingServiceTest.createLegalPersonBooking" />
+      <item itemvalue="JUnit.BookingServiceTest.createLegalPersonGermanBooking" />
       <item itemvalue="JUnit.ContentServiceTest" />
-      <item itemvalue="JUnit.PaymentServiceTest" />
-      <item itemvalue="JUnit.ResourceServiceTest" />
+      <item itemvalue="JUnit.ContentServiceTest.addContent" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AuthenticationServiceTest" />
-        <item itemvalue="JUnit.PaymentServiceTest" />
         <item itemvalue="JUnit.ContentServiceTest" />
-        <item itemvalue="JUnit.ResourceServiceTest" />
+        <item itemvalue="JUnit.ContentServiceTest.addContent" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.BookingServiceTest.createLegalPersonGermanBooking" />
+        <item itemvalue="JUnit.BookingServiceTest.createLegalPersonBooking" />
       </list>
     </recent_temporary>
   </component>
@@ -196,8 +214,8 @@
       <workItem from="1688110588422" duration="14815000" />
       <workItem from="1688129565317" duration="128000" />
       <workItem from="1688210597018" duration="14408000" />
-      <workItem from="1692963955533" duration="11942000" />
-      <workItem from="1694369459554" duration="6765000" />
+      <workItem from="1692963955533" duration="7611000" />
+      <workItem from="1694434163672" duration="12991000" />
     </task>
     <task id="LOCAL-00001" summary="Create Structure">
       <created>1685012362808</created>
@@ -292,29 +310,13 @@
       <option name="project" value="LOCAL" />
       <updated>1692965457505</updated>
     </task>
-    <task id="LOCAL-00014" summary="fix error when userinput is alphabetic at extra booking.&#10;adjust some statistics visitor pattern things in most classes.&#10;added statistics output in mainclass.">
-      <created>1693002010746</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1693002010746</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -326,6 +328,15 @@
                 </option>
               </RecentGroup>
             </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
           </value>
         </entry>
       </map>
@@ -342,27 +353,13 @@
     <MESSAGE value="optimize dialog outputs; replacing &quot;equals&quot; usage with &quot;matches&quot; usage to clean up code; fixed code issue that lead into redundant question output when typing in wrong character at question &quot;Is your Data correct?&quot;" />
     <MESSAGE value="xml changes" />
     <MESSAGE value="comment code adjustments" />
-    <MESSAGE value="fix error when userinput is alphabetic at extra booking.&#10;adjust some statistics visitor pattern things in most classes.&#10;added statistics output in mainclass." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix error when userinput is alphabetic at extra booking.&#10;adjust some statistics visitor pattern things in most classes.&#10;added statistics output in mainclass." />
+    <option name="LAST_COMMIT_MESSAGE" value="comment code adjustments" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/statistics/behavior/StatisticsService.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/test/content/behaviour/ContentServiceTest.java</url>
-          <line>13</line>
-          <properties class="content.behaviour.ContentServiceTest" method="setUp">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="discoveryRequest" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

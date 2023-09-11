@@ -86,6 +86,7 @@ public class SummaryFile extends File{
             sb.append(prefix).append("  Payment-").append(payment.getPaymentId()).append(": Date: ").append(payment.getPaymentMonth())
                     .append(".").append(payment.getPaymentYear()).append(" Transfer-Amount: ").append(payment.getTransferAmount()).append("\n");
         }
+        sb.append(prefix).append("                            ").append("Total-Amount: ").append(fullPaymentAmount);
         return sb.toString();
     }
 }

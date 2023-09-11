@@ -29,7 +29,7 @@ public class PersonService {
                 }
             }
             PersonFactory personFactory = new PersonFactory();
-            person = personFactory.create(personType);
+            person = personFactory.create(personType, sc);
             if (person != null) {
                 correctInput = false;
                 System.out.println();
