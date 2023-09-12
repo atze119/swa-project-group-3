@@ -12,7 +12,7 @@ class PaymentServiceTest {
     @AfterEach
     void tearDown() {
     }
-
+    //TODO create Testobject with some Testdata inside without using existing Classes like Booking
 //    @Test
 //    void runPaymentTestMultipleTimes() {
 //        int numberOfIterations = 5;
@@ -24,7 +24,7 @@ class PaymentServiceTest {
 
 
 //    void payAmount() {
-//        // TODO create Testobject with some Testdata inside without using existing Classes like Booking
+//
 ////            Booking bookingdummy = new Booking() {
 //                @Override
 //                public void printBooking() {
