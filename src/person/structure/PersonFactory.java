@@ -3,9 +3,8 @@ package person.structure;
 import java.util.Scanner;
 
 public class PersonFactory {
-    public Person create(PersonType personType) {
+    public Person create(PersonType personType, Scanner sc) {
         Person person;
-        Scanner sc = new Scanner(System.in);
         switch (personType) {
             case NATURAL_PERSON -> {
                 System.out.println("What is your firstname?");
@@ -46,7 +45,7 @@ public class PersonFactory {
             }
             case LEGAL_PERSON -> {
                 System.out.println("What is the name of your company?");
-                String companyName = sc.nextLine();
+                String companyName = sc.next();
                 person = new LegalPerson(companyName);
             }
             default -> throw new IllegalArgumentException("Unexpected Value: " + personType);

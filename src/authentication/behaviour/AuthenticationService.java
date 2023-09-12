@@ -1,6 +1,6 @@
-package authentification.behaviour;
+package authentication.behaviour;
 
-import authentification.structure.*;
+import authentication.structure.*;
 import person.structure.NaturalPerson;
 import person.structure.Person;
 import java.util.Scanner;
@@ -10,13 +10,13 @@ public class AuthenticationService {
 
     public Credential authenticateSubject(Person subject) {    //Subject als Fachtyp eigene Klasse?
         Credential credential = null;
+        Scanner sc = new Scanner(System.in);
         if (subject instanceof NaturalPerson) {
             System.out.println("""
                     Choose between Username-Password-Strategy: 1
                     Fingerprint-Scan-Strategy: 2
                     Eye-Scan-Strategy: 3
                     """);
-            Scanner sc = new Scanner(System.in);
             boolean validInput = false;
             while (!validInput) {
                 String userInput = sc.next();
@@ -37,7 +37,7 @@ public class AuthenticationService {
             credential = new ValidationCodeStrategy();
             // At this point Legal person has only one strategy
         }
-        credential.authenticate();
+        credential.authenticate(sc);
         return credential;
     }
 

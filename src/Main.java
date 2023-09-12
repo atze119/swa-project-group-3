@@ -1,4 +1,4 @@
-import authentification.behaviour.AuthenticationService;
+import authentication.behaviour.AuthenticationService;
 import booking.behaviour.BookingService;
 import booking.structure.Booking;
 import content.behaviour.ContentService;

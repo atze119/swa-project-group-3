@@ -17,7 +17,7 @@ public class ContentService {
         root.addContent(new Folder("Payment",7,2023));
     }
 
-    public void addContent(Booking booking, Payment payment) {
+    public Content addContent(Booking booking, Payment payment) {
 
         Folder bookingFolder = getOrCreateFolder(root, "Booking");
         Folder bookingYearFolder = getOrCreateFolder(bookingFolder, "Year " + booking.getBookingYear());
@@ -46,6 +46,7 @@ public class ContentService {
             summaryFile.addBooking(booking);
             summaryFile.addPayment(payment);
         }
+        return content;
     }
 
     private Folder getOrCreateFolder(Folder parentFolder, String name){
