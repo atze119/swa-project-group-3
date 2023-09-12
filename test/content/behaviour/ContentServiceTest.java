@@ -5,18 +5,15 @@ import booking.structure.Booking;
 import content.structure.Content;
 import content.structure.SummaryFile;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import payment.behaviour.PaymentService;
-import payment.structure.Account;
 import payment.structure.Payment;
 import person.structure.NaturalPerson;
 import resource.structure.Car;
 import resource.structure.ChildSeat;
 import resource.structure.Resource;
 import resource.structure.RoofBox;
-import statistics.structure.Visitor;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
