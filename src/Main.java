@@ -27,7 +27,7 @@ public class Main {
         Resource resource;
         PaymentService paymentService;
         Payment payment;
-        carreservation:while(true) {
+        carReservation:while(true) {
             person = PersonService.createPerson();
             if (person == null) {
                 return;
@@ -55,7 +55,7 @@ public class Main {
                 if (!userInput.matches("Y|y|N|n")) {
                     System.out.println("Please input a valid character! [Y] | [N]");
                 } else if (userInput.matches("N|n")) {
-                    break carreservation;
+                    break carReservation;
                 } else {
                     validInput = true;
                 }

@@ -7,19 +7,6 @@
     <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="visitor pattern finish + test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/booking/behaviour/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/behaviour/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/booking/structure/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/structure/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/booking/structure/EnglishBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/structure/EnglishBooking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/booking/structure/GermanBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/structure/GermanBooking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/structure/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/statistics/behavior/StatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statistics/behavior/StatisticsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/statistics/structure/StatisticsVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statistics/structure/StatisticsVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/statistics/structure/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statistics/structure/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/statistics/behaviour/StatisticsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/statistics/behaviour/StatisticsServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692385244305</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="visitor pattern finish + test">
+      <created>1694551498047</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1694551498047</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
