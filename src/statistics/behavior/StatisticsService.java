@@ -1,27 +1,53 @@
 package statistics.behavior;
 
-import payment.structure.GoogleWalletPayment;
-import payment.structure.PayPalPayment;
 import statistics.structure.StatisticsVisitor;
-import statistics.structure.Visitor;
 
-public class StatisticsService {
-    public void getGermanBookingsPaidByPayPal() {
-        // ...
-        PayPalPayment paypalPayment = new PayPalPayment();
-        Visitor visitor = new StatisticsVisitor();
-        paypalPayment.accept(visitor);
-        // ...
+public class StatisticsService{
+
+    private int getEnglishBookingsPaidByPayPal(StatisticsVisitor visitor) {
+        return visitor.englishBookingsPaidByPayPalCount;
     }
 
-    public void getGermanBookingsPaidByGoogleWallet() {
-        // ...
-        GoogleWalletPayment googleWalletPayment = new GoogleWalletPayment();
-        Visitor visitor = new StatisticsVisitor();
-        googleWalletPayment.accept(visitor);
-        // ...
+
+    private int getGermanBookingsPaidByPayPal(StatisticsVisitor visitor) {
+        return visitor.germanBookingsPaidByPayPalCount;
     }
 
-    //TODO get Methods aus StatisticsVisitor
+
+    private int getEnglishBookingsPaidByGoogleWallet(StatisticsVisitor visitor) {
+        return visitor.englishBookingPaidByGoogleWalletCount;
+    }
+
+
+    private int getGermanBookingsPaidByGoogleWallet(StatisticsVisitor visitor) {
+        return visitor.germanBookingPaidByGoogleWalletCount;
+    }
+
+
+    private int getEnglishBookingsPaidByMobileMoneyWallet(StatisticsVisitor visitor) {
+        return visitor.englishBookingPaidByMobileWalletCount;
+    }
+
+
+    private int getGermanBookingsPaidByMobileMoneyWallet(StatisticsVisitor visitor) {
+        return visitor.germanBookingPaidByMobileWalletCount;
+    }
+
+
+    public void printStatistics(StatisticsVisitor visitor) {
+        System.out.println("PayPal wurde " + getEnglishBookingsPaidByPayPal(visitor) + " mal in englischen Buchungen benutzt.");
+
+        System.out.println("PayPal wurde " + getGermanBookingsPaidByPayPal(visitor) + " mal in deutschen Buchungen benutzt.");
+
+        System.out.println("Mobile Money Wallet wurde " + getEnglishBookingsPaidByMobileMoneyWallet(visitor) + " mal in englischen Buchungen benutzt.");
+
+        System.out.println("Mobile Money Wallet wurde " + getGermanBookingsPaidByMobileMoneyWallet(visitor) + " mal in deutschen Buchungen benutzt.");
+
+        System.out.println("Google Wallet wurde " + getEnglishBookingsPaidByGoogleWallet(visitor) + " mal in englischen Buchungen benutzt.");
+
+        System.out.println("Google Wallet wurde " + getGermanBookingsPaidByGoogleWallet(visitor) + " mal in deutschen Buchungen benutzt.");
+
+}
+
 }
 

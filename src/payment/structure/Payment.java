@@ -1,12 +1,14 @@
 package payment.structure;
 
 import booking.structure.Booking;
-import statistics.structure.Visitor;
 
 public abstract class Payment{
 
     //visitor pattern
-    public abstract void accept(Visitor visitor);
+//    public void accept(Visitor visitor) {
+//        visitor.visit(this);
+//    }
+
     private int transferAmount;
     private int paymentMonth;
     private int paymentYear;

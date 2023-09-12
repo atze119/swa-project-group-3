@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="fix some things together with Fynn and adjust the TODOs">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="visitor pattern finish + test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/booking/behaviour/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/behaviour/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/booking/structure/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/structure/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/booking/structure/EnglishBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/structure/EnglishBooking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/booking/structure/GermanBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/structure/GermanBooking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/GoogleWalletPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/MobileMoneyWalletPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/PayPalPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/structure/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/structure/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/statistics/behavior/StatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statistics/behavior/StatisticsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/statistics/structure/StatisticsVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statistics/structure/StatisticsVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/statistics/structure/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statistics/structure/Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/statistics/behaviour/StatisticsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/statistics/behaviour/StatisticsServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +70,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Movitz/IdeaProjects/swa-project-group-3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Dev&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -81,26 +94,10 @@
       <recent name="payment.structure" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.StatisticsServiceTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="swa-project-group-3" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PaymentServiceTest.payAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="swa-project-group-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="payment.behaviour.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="payment.behaviour" />
-      <option name="MAIN_CLASS_NAME" value="payment.behaviour.PaymentServiceTest" />
-      <option name="METHOD_NAME" value="payAmount" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,20 +143,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StatisticsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swa-project-group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="statistics.behaviour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="statistics.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="statistics.behaviour.StatisticsServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.PaymentServiceTest.payAmount" />
+      <item itemvalue="JUnit.StatisticsServiceTest" />
       <item itemvalue="JUnit.PaymentServiceTest.runPaymentTestMultipleTimes" />
       <item itemvalue="JUnit.PersonServiceTest.createPerson" />
       <item itemvalue="JUnit.ResourceServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StatisticsServiceTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ResourceServiceTest" />
         <item itemvalue="JUnit.PersonServiceTest.createPerson" />
         <item itemvalue="JUnit.PaymentServiceTest.runPaymentTestMultipleTimes" />
-        <item itemvalue="JUnit.PaymentServiceTest.payAmount" />
       </list>
     </recent_temporary>
   </component>
@@ -266,21 +278,7 @@
       <option name="project" value="LOCAL" />
       <updated>1692385244305</updated>
     </task>
-    <task id="LOCAL-00013" summary="fix some things together with Fynn and adjust the TODOs">
-      <created>1694513434017</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1694513434017</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fix some things together with Fynn and adjust the TODOs">
-      <created>1694513440370</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1694513440370</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +321,7 @@
     <MESSAGE value="optimize dialog outputs; replacing &quot;equals&quot; usage with &quot;matches&quot; usage to clean up code; fixed code issue that lead into redundant question output when typing in wrong character at question &quot;Is your Data correct?&quot;" />
     <MESSAGE value="xml changes" />
     <MESSAGE value="comment code adjustments" />
-    <MESSAGE value="fix some things together with Fynn and adjust the TODOs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some things together with Fynn and adjust the TODOs" />
+    <MESSAGE value="visitor pattern finish + test" />
+    <option name="LAST_COMMIT_MESSAGE" value="visitor pattern finish + test" />
   </component>
 </project>

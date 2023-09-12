@@ -22,13 +22,13 @@ public class BookingService {
                 System.out.println("Please input a valid character! [G] | [E]");
             } else if (userInput.matches("G|g")) {
                 GermanBooking germanBooking = new BookingBuilder()
-                        .head(person.getName()) // maybe input Person.getName
+                        .head(person.getName())
                         .body(resource.getResource())
-                        .footer(resource.getCosts()) // something
+                        .footer(resource.getCosts())
                         .buildGerman();
                 germanBooking.printBooking();
                 booking = germanBooking;
-                validInput = true; // to break out of while loop
+                validInput = true;
             } else {
                 EnglishBooking englishBooking = new BookingBuilder()
                         .head(person.getName())
@@ -37,9 +37,9 @@ public class BookingService {
                         .buildEnglish();
                 englishBooking.printBooking();
                 booking = englishBooking;
-                validInput = true; // to break out of while loop
+                validInput = true;
             }
         }
-        return booking;                 //return booking --> payment needs booking values
+        return booking;
     }
 }

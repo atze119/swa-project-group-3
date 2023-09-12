@@ -8,12 +8,18 @@ import person.behaviour.PersonService;
 import person.structure.Person;
 import resource.behaviour.ResourceService;
 import resource.structure.Resource;
+import statistics.behavior.StatisticsService;
 import statistics.structure.StatisticsVisitor;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         ContentService contentService = new ContentService();
         StatisticsVisitor visitor = new StatisticsVisitor();
+        StatisticsService statistics = new StatisticsService();
+        Person person;
         AuthenticationService authenticationService;
         BookingService bookingService;
         Booking booking;
@@ -21,10 +27,8 @@ public class Main {
         Resource resource;
         PaymentService paymentService;
         Payment payment;
-        for(int i = 0; i<5;i++) {
-            //Scanner sc = new Scanner(System.in);
-            //PersonService personService = new PersonService(); when static stays
-            Person person = PersonService.createPerson();
+        carreservation:while(true) {
+            person = PersonService.createPerson();
             if (person == null) {
                 return;
             }
@@ -43,9 +47,21 @@ public class Main {
             contentService.addContent(booking, payment);
             contentService.printStructure();
 
-            payment.accept(visitor);
-        //TODO schleife zu while schleife und per abfrage am Ende Möglichkeit zum Ausbruch haben
+            booking.accept(visitor, payment);
+            boolean validInput = false;
+            System.out.println("Do you want to reservate an other car? Yes [Y] | No [N]");
+            while (!validInput) {
+                String userInput = sc.next();
+                if (!userInput.matches("Y|y|N|n")) {
+                    System.out.println("Please input a valid character! [Y] | [N]");
+                } else if (userInput.matches("N|n")) {
+                    break carreservation;
+                } else {
+                    validInput = true;
+                }
+            }
         }
-        //TODO visitor nach ausbruch aus schleife mit allen payment methods
+        statistics.printStatistics(visitor);
     }
+
 }

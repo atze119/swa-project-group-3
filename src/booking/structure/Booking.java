@@ -1,9 +1,12 @@
 package booking.structure;
 
-import java.util.Date;
+import payment.structure.Payment;
+import statistics.structure.Visitor;
 
 public interface Booking {
 
+
+    void accept(Visitor visitor, Payment payment);
     void printBooking();
     int getCosts();
     int getBookingMonth();

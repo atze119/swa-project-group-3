@@ -1,52 +1,68 @@
 package statistics.structure;
 
+import booking.structure.EnglishBooking;
+import booking.structure.GermanBooking;
 import payment.structure.GoogleWalletPayment;
 import payment.structure.MobileMoneyWalletPayment;
 import payment.structure.PayPalPayment;
 
 public class StatisticsVisitor implements Visitor {
 
-    int pPCounter;
-    int gWCounter;
-    int mMWCounter;
-    //public void printPaymentStatistic(List<Payment> payments) {
-    //    for (Payment payment : payments) {
-    //        payment.accept(this);
-    //    }
-    //}
+    public int englishBookingsPaidByPayPalCount = 0;
+    public int germanBookingsPaidByPayPalCount = 0;
+    public int englishBookingPaidByMobileWalletCount = 0;
+    public int germanBookingPaidByMobileWalletCount = 0;
+    public int germanBookingPaidByGoogleWalletCount = 0;
+    public int englishBookingPaidByGoogleWalletCount = 0;
+
     @Override
-    public void visitPayPal(PayPalPayment paypalPayment) {
-        pPCounter = pPCounter + 1;
-        System.out.println("PayPal wurde " + pPCounter + " mal benutzt.");
+    public void visit(EnglishBooking booking, PayPalPayment payment) {
+        englishBookingsPaidByPayPalCount++;
     }
 
     @Override
-    public void visitGoogleWallet(GoogleWalletPayment googleWalletPayment) {
-        gWCounter = gWCounter + 1;
-        System.out.println("GoogleWalet wurde " + gWCounter + " mal benutzt.");
+    public void visit(GermanBooking booking, PayPalPayment payment) {
+        germanBookingsPaidByPayPalCount++;
     }
 
     @Override
-    public void visitMobileMoneyWallet(MobileMoneyWalletPayment moneyWalletPayment) {
-        mMWCounter = mMWCounter + 1;
-        System.out.println("MobileMoneyWallet wurde " + mMWCounter + " mal benutzt.");
+    public void visit(EnglishBooking booking, MobileMoneyWalletPayment payment) {
+        englishBookingPaidByMobileWalletCount++;
     }
 
-//    @Override
-//    public void visitEnglishPayPal(PayPalPayment paypalPayment) {
-//        pPCounter = pPCounter + 1;
-//        System.out.println("PayPal wurde " + pPCounter + " mal benutzt.");
-//    }
-//
-//    @Override
-//    public void visitEnglishGoogleWallet(GoogleWalletPayment googleWalletPayment) {
-//        gWCounter = gWCounter + 1;
-//        System.out.println("GoogleWalet wurde " + gWCounter + " mal benutzt.");
-//    }
-//
-//    @Override
-//    public void visitEnglishMobileMoneyWallet(MobileMoneyWalletPayment moneyWalletPayment) {
-//        mMWCounter = mMWCounter + 1;
-//        System.out.println("MobileMoneyWallet wurde " + mMWCounter + " mal benutzt.");
+    @Override
+    public void visit(GermanBooking booking, MobileMoneyWalletPayment payment) {
+        germanBookingPaidByMobileWalletCount++;
+    }
+
+    @Override
+    public void visit(EnglishBooking booking, GoogleWalletPayment payment) {
+        englishBookingPaidByGoogleWalletCount++;
+    }
+
+    @Override
+    public void visit(GermanBooking booking, GoogleWalletPayment payment) {
+        germanBookingPaidByGoogleWalletCount++;
+    }
+
+//    public void printStatistics() {
+//        if (englishBookingsPaidByPayPalCount > 0) {
+//            System.out.println("PayPal wurde " + englishBookingsPaidByPayPalCount + " mal in englischen Buchungen benutzt.");
+//        }
+//        if (germanBookingsPaidByPayPalCount > 0) {
+//            System.out.println("PayPal wurde " + germanBookingsPaidByPayPalCount + " mal in deutschen Buchungen benutzt.");
+//        }
+//        if (englishBookingPaidByMobileWalletCount > 0) {
+//            System.out.println("Mobile Money Wallet wurde " + englishBookingPaidByMobileWalletCount + " mal in englischen Buchungen benutzt.");
+//        }
+//        if (germanBookingPaidByMobileWalletCount > 0) {
+//            System.out.println("Mobile Money Wallet wurde " + germanBookingPaidByMobileWalletCount + " mal in deutschen Buchungen benutzt.");
+//        }
+//        if (englishBookingPaidByGoogleWalletCount > 0) {
+//            System.out.println("Google Wallet wurde " + englishBookingPaidByGoogleWalletCount + " mal in englischen Buchungen benutzt.");
+//        }
+//        if (germanBookingPaidByGoogleWalletCount > 0) {
+//            System.out.println("Google Wallet wurde " + germanBookingPaidByGoogleWalletCount + " mal in deutschen Buchungen benutzt.");
+//        }
 //    }
 }

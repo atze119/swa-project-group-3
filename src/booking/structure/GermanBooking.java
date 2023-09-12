@@ -1,5 +1,11 @@
 package booking.structure;
 
+import payment.structure.GoogleWalletPayment;
+import payment.structure.MobileMoneyWalletPayment;
+import payment.structure.PayPalPayment;
+import payment.structure.Payment;
+import statistics.structure.Visitor;
+
 import java.util.Random;
 
 public class GermanBooking implements Booking {
@@ -8,6 +14,18 @@ public class GermanBooking implements Booking {
     private int bookingMonth;
     private int bookingYear = 2023;
 
+    @Override
+    public void accept(Visitor visitor, Payment payment) {
+        if (payment instanceof PayPalPayment) {
+            visitor.visit(this, (PayPalPayment) payment);
+        }
+        if (payment instanceof MobileMoneyWalletPayment) {
+            visitor.visit(this, (MobileMoneyWalletPayment) payment);
+        }
+        if (payment instanceof GoogleWalletPayment) {
+            visitor.visit(this, (GoogleWalletPayment) payment);
+        }
+    }
     private int bookingId;
     public GermanBooking(String head, String body, int footer) {
         this.head = head;

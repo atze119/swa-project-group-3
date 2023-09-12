@@ -1,5 +1,7 @@
 package statistics.behaviour;
 
+import booking.structure.EnglishBooking;
+import booking.structure.GermanBooking;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,47 +9,47 @@ import payment.structure.GoogleWalletPayment;
 import payment.structure.PayPalPayment;
 import statistics.behavior.StatisticsService;
 import statistics.structure.StatisticsVisitor;
-import statistics.structure.Visitor;
 
-//import static org.junit.jupiter.api.Assertions.assertEquals;
-//TODO write Test
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class StatisticsServiceTest {
 
+    private StatisticsVisitor visitor;
     private StatisticsService statisticsService;
-    private Visitor visitor;
+
     @BeforeEach
-    public void setUP() {
-        statisticsService = new StatisticsService();
+    public void setUp() {
         visitor = new StatisticsVisitor();
+        statisticsService = new StatisticsService();
     }
 
     @AfterEach
     void tearDown() {
-        statisticsService = null;
         visitor = null;
+        statisticsService = null;
     }
     @Test
-    public void testGetGermanBookingsPaidByPayPal() {
-        PayPalPayment paypalPayment = new PayPalPayment();
-        paypalPayment.accept(visitor);
-        statisticsService.getGermanBookingsPaidByPayPal();
+    public void testPrintStatistics() {
+        EnglishBooking englishBooking1 = new EnglishBooking("Head1", "Body1", 100);
+        EnglishBooking englishBooking2 = new EnglishBooking("Head2", "Body2", 200);
+        EnglishBooking englishBooking3 = new EnglishBooking("Head2", "Body2", 200);
+        GermanBooking germanBooking1 = new GermanBooking("Kopf1", "Körper1", 150);
+        GermanBooking germanBooking2 = new GermanBooking("Kopf2", "Körper2", 250);
 
-        //int count = visitor.getPayPalStatistics; //Annahme: getPayPalStatistics gibt die Anzahl der PayPal-Zahlungen zurück
-        // Assert
-        //int expectedCount = 5; // Erwartete Anzahl von PayPal-Zahlungen
-        //assertEquals(expectedCount, count);
+        englishBooking1.accept(visitor, new PayPalPayment());
+        englishBooking2.accept(visitor, new PayPalPayment());
+        englishBooking3.accept(visitor, new GoogleWalletPayment());
+        germanBooking1.accept(visitor, new PayPalPayment());
+        germanBooking2.accept(visitor, new GoogleWalletPayment());
+
+        statisticsService.printStatistics(visitor);
+
+        assertEquals(2, visitor.englishBookingsPaidByPayPalCount);
+        assertEquals(1, visitor.germanBookingsPaidByPayPalCount);
+        assertEquals(0, visitor.englishBookingPaidByMobileWalletCount);
+        assertEquals(0, visitor.germanBookingPaidByMobileWalletCount);
+        assertEquals(1, visitor.englishBookingPaidByGoogleWalletCount);
+        assertEquals(1, visitor.germanBookingPaidByGoogleWalletCount);
     }
-
-    @Test
-    public void testGetGermanBookingsPaidByGoogleWallet() {
-        GoogleWalletPayment googleWalletPayment  = new GoogleWalletPayment();
-        googleWalletPayment.accept(visitor);
-        statisticsService.getGermanBookingsPaidByGoogleWallet();
-        //int count = visitor.getGoogleWalletStatistics(); //Annahme: getGoogleWalletStatistics gibt die Anzahl der Google Wallet-Zahlungen zurück
-        // Assert
-        //int expectedCount = 3; // Erwartete Anzahl von Google Wallet-Zahlungen
-        //assertEquals(expectedCount, count);
-    }
-
-    // Weitere Tests für andere Kombinationen von Zahlungsmethoden und Buchungen
 }
+

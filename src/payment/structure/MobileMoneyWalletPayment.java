@@ -1,13 +1,9 @@
 package payment.structure;
 
 import booking.structure.Booking;
-import statistics.structure.Visitor;
 
 public class MobileMoneyWalletPayment extends Payment {
 
-    public void accept(Visitor visitor) {
-        visitor.visitMobileMoneyWallet(this);
-    }
     @Override
     protected void currencyAmountFromSenderToReceiver(Account senderAccount, Account receiverAccount, Booking booking) {
         int transferAmount = booking.getCosts();
