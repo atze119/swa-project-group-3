@@ -8,8 +8,13 @@ public abstract class ResourceAdder implements Resource {
     }
 
     @Override
-    public String getResource() {
-        return resource.getResource();
+    public String getEnglishResource() {
+        return resource.getEnglishResource();
+    }
+
+    @Override
+    public String getGermanResource() {
+        return resource.getGermanResource();
     }
 
     @Override

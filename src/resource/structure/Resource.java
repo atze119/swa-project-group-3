@@ -1,7 +1,8 @@
 package resource.structure;
 
 public interface Resource {
-    String getResource();
+    String getEnglishResource();
+    String getGermanResource();
     int getCosts();
 
 }

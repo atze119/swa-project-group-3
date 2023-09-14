@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class PersonFactory {
     public Person create(PersonType personType, Scanner sc) {
+
         Person person;
         switch (personType) {
             case NATURAL_PERSON -> {

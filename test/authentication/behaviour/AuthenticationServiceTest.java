@@ -1,10 +1,9 @@
 package authentication.behaviour;
 
-import authentication.behaviour.AuthenticationService;
 import authentication.structure.Credential;
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import person.structure.LegalPerson;
 import person.structure.NaturalPerson;
@@ -14,27 +13,29 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
 class AuthenticationServiceTest {
-    private static AuthenticationService authenticationService;
-    private static InputStream sysInBackup;
-    private static Person legalPerson;
-    private static Person naturalPerson;
+    private AuthenticationService authenticationService;
+    private InputStream sysInBackup;
+    private Person legalPerson;
+    private Person naturalPerson;
 
 
-    @BeforeAll
-    static void beforeAll() {
+    @BeforeEach
+    void setUp() {
         authenticationService = new AuthenticationService();
         sysInBackup = System.in;
         legalPerson = new LegalPerson("Leuphana");
         naturalPerson = new NaturalPerson("Max", "Mustermann", true, true);
     }
 
-    @AfterAll
-    static void shutDown() {
+    @AfterEach
+    void tearDown() {
+        legalPerson = null;
+        naturalPerson = null;
         authenticationService = null;
         System.setIn(sysInBackup);
 
     }
-        //TODO implement working Test
+
     @Test
     void authenticateLegalSubject() {
         Credential credential = authenticationService.authenticateSubject(legalPerson);

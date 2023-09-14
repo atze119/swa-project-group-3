@@ -2,6 +2,7 @@ package booking.behaviour;
 
 import booking.structure.Booking;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import person.structure.LegalPerson;
@@ -15,14 +16,12 @@ import resource.structure.RoofBox;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 class BookingServiceTest {
     private Person naturalPerson;
     private Person legalPerson;
     private Resource resource;
     private BookingService bookingService;
-    private static InputStream sysInBackup;
+    private InputStream sysInBackup;
     //TODO Test schreiben für createBooking
     @BeforeEach
     void setUp() {
@@ -43,23 +42,23 @@ class BookingServiceTest {
     }
 
     @Test
-    void createGermanBooking() {
+    void createNaturalGermanBooking() {
         String userInput = "G";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
         Booking booking = bookingService.createBooking(naturalPerson, resource);
-        assertNotNull(booking);
+        Assertions.assertNotNull(booking);
     }
 
     @Test
-    void createEnglishBooking() {
+    void createNaturalEnglishBooking() {
         String userInput = "E";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
         Booking booking = bookingService.createBooking(naturalPerson, resource);
-        assertNotNull(booking);
+        Assertions.assertNotNull(booking);
     }
 
     @Test
@@ -69,7 +68,7 @@ class BookingServiceTest {
         System.setIn(in);
 
         Booking booking = bookingService.createBooking(legalPerson, resource);
-        assertNotNull(booking);
+        Assertions.assertNotNull(booking);
     }
 
     @Test
@@ -79,6 +78,24 @@ class BookingServiceTest {
         System.setIn(in);
 
         Booking booking = bookingService.createBooking(legalPerson, resource);
-        assertNotNull(booking);
+        Assertions.assertNotNull(booking);
+    }
+
+    @Test
+    void createBookingWithoutPerson() {
+        String userInput = "G";
+        ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(in);
+
+        Assertions.assertThrows(NullPointerException.class, () -> bookingService.createBooking(null, resource));
+    }
+
+    @Test
+    void createBookingWithoutResource() {
+        String userInput = "G";
+        ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(in);
+
+        Assertions.assertThrows(NullPointerException.class, () -> bookingService.createBooking(naturalPerson, null));
     }
 }

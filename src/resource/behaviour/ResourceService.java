@@ -14,10 +14,10 @@ public class ResourceService { // Car == the main Resource
         while (!userInput) {
             System.out.println("If you want to book something extra to your car input [Y] for Yes or [N] for No to the following questions: ");
             System.out.println("Do you want to book a child seat to your car?");
-            boolean childSeat = bookExtra();
+            boolean childSeat = bookExtra(sc);
 
             System.out.println("Do you want do book a Roof-Box to your car?");
-            boolean roofBox = bookExtra();
+            boolean roofBox = bookExtra(sc);
 
             if (childSeat && roofBox) {
                 resource = new ChildSeat(new RoofBox(new Car())); // car == the main resource constructor call:
@@ -28,7 +28,7 @@ public class ResourceService { // Car == the main Resource
             } else {
                 resource = new Car();
             }
-            System.out.println("For the booking you have selected: " + resource.getResource() + ".");
+            System.out.println("For the booking you have selected: " + resource.getEnglishResource());
             System.out.println("The price of your selected resources is: " + resource.getCosts());
             System.out.println();
 
@@ -49,8 +49,7 @@ public class ResourceService { // Car == the main Resource
         return resource;
     }
 
-    private boolean bookExtra() {
-        Scanner sc = new Scanner(System.in);
+    private boolean bookExtra(Scanner sc) {
         while (true) {
             String userInput = sc.next();
             if (!userInput.matches("Y|y|N|n")) {

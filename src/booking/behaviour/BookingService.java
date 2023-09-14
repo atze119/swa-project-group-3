@@ -23,7 +23,7 @@ public class BookingService {
             } else if (userInput.matches("G|g")) {
                 GermanBooking germanBooking = new BookingBuilder()
                         .head(person.getName())
-                        .body(resource.getResource())
+                        .body(resource.getGermanResource())
                         .footer(resource.getCosts())
                         .buildGerman();
                 germanBooking.printBooking();
@@ -32,7 +32,7 @@ public class BookingService {
             } else {
                 EnglishBooking englishBooking = new BookingBuilder()
                         .head(person.getName())
-                        .body(resource.getResource())
+                        .body(resource.getEnglishResource())
                         .footer(resource.getCosts())
                         .buildEnglish();
                 englishBooking.printBooking();

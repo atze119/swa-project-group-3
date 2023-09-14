@@ -9,7 +9,6 @@ public class ContentService {
     //TODO  Change int month and int year to different type: e.g.: LocalDate  (change starts in booking and payment)
 
     private final Folder root;
-    private int paymentId = 1;
 
     public ContentService(){
         root = new Folder("Content",7,2023);
@@ -32,7 +31,6 @@ public class ContentService {
 
         SimpleFile paymentFile = new SimpleFile("Payment-"+payment.getPaymentId(), payment.getPaymentMonth(), payment.getPaymentYear(), payment.getTransferAmount());
         paymentMonthFolder.addContent(paymentFile);
-        paymentId++;
 
         Content content = root.getSubFolder("Summary");
 
@@ -45,6 +43,7 @@ public class ContentService {
             summaryFile.addAmount(booking.getCosts(), payment.getTransferAmount());
             summaryFile.addBooking(booking);
             summaryFile.addPayment(payment);
+            return summaryFile;
         }
         return content;
     }
@@ -58,7 +57,9 @@ public class ContentService {
         return folder;
     }
 
-    public void printStructure() {
-        System.out.println(root.printStructure(""));
+    public String printStructure() {
+        String structure = root.printStructure("");
+        System.out.println(structure);
+        return structure;
     }
 }
