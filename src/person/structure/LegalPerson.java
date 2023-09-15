@@ -7,14 +7,6 @@ public class LegalPerson implements Person {
         this.companyName = companyName;
     }
 
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
     @Override
     public String getName() {
         return companyName;
@@ -23,6 +15,5 @@ public class LegalPerson implements Person {
     @Override
     public void printInformation() {
         System.out.println("Company name: " + companyName);
-        // TODO implement further information
     }
 }

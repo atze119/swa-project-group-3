@@ -4,11 +4,6 @@ import booking.structure.Booking;
 
 public abstract class Payment {
 
-    //visitor pattern
-//    public void accept(Visitor visitor) {
-//        visitor.visit(this);
-//    }
-
     private int transferAmount;
     private int paymentMonth;
     private int paymentYear;

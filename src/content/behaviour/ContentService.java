@@ -6,8 +6,6 @@ import payment.structure.Payment;
 
 public class ContentService {
 
-    //TODO  Change int month and int year to different type: e.g.: LocalDate  (change starts in booking and payment)
-
     private final Folder root;
 
     public ContentService(){
@@ -59,7 +57,7 @@ public class ContentService {
 
     public String printStructure() {
         String structure = root.printStructure("");
-        System.out.println(structure);
+        System.out.println(root.printStructure(""));
         return structure;
     }
 }

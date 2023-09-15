@@ -54,22 +54,6 @@ public class SummaryFile extends File {
         this.fullPaymentAmount += paymentAmount;
     }
 
-    public void addBookingAmount(int bookingAmount){
-        this.fullBookingAmount += bookingAmount;
-    }
-
-    public void addPaymentAmount(int paymentAmount){
-        this.fullPaymentAmount += paymentAmount;
-    }
-
-    public int getFullBookingAmount() {
-        return fullBookingAmount;
-    }
-
-    public int getFullPaymentAmount() {
-        return fullPaymentAmount;
-    }
-
     public int getSum(){
        this.sum = fullBookingAmount - fullPaymentAmount;
        return this.sum;

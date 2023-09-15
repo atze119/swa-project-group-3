@@ -13,7 +13,7 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.Scanner;
 
-class AuthenticationServiceTest {
+public class AuthenticationServiceTest {
     private AuthenticationService authenticationService;
     private InputStream sysInBackup;
     private Person legalPerson;
@@ -38,13 +38,13 @@ class AuthenticationServiceTest {
     }
 
     @Test
-    void authenticateLegalSubject() {
+    public void testAuthenticateLegalSubject() {
         Credential credential = authenticationService.authenticateSubject(legalPerson, new Scanner(System.in));
         Assertions.assertNotNull(credential);
     }
 
     @Test
-    void authenticateNaturalSubject() {
+    public void testAuthenticateNaturalSubject() {
         String userInput = "2"; // authenticate-strategy
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);

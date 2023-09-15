@@ -11,44 +11,12 @@ public class NaturalPerson implements Person {
         this.licenseAge = licenseAge;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public boolean getAge() {
-        return age;
-    }
-
-    public void setAge(boolean age) {
-        this.age = age;
-    }
-
-    public boolean getLicenseAge() {
-        return licenseAge;
-    }
-
     @Override
     public void printInformation() {
         System.out.println("Firstname: " + firstName);
         System.out.println("Lastname: " + lastName);
         System.out.println("Old enough: " + age);
         System.out.println("Driver's license long enough: " + licenseAge);
-    }
-
-    public void setLicenseAge(boolean licenseAge) {
-        this.licenseAge = licenseAge;
     }
 
     @Override

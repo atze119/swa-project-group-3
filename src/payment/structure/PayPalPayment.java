@@ -17,8 +17,6 @@ public class PayPalPayment extends Payment {
         }else{
         throw new IllegalStateException("Sender does not have enough balance for transaction");
         }
-        int senderBalanceNew = senderAccount.getCurrencyAmount().getAmount();
-        int receiverBalanceNew = receiverAccount.getCurrencyAmount().getAmount();
 
         System.out.printf("""
                 The payment will now be made . . .

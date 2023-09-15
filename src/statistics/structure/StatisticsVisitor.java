@@ -45,24 +45,4 @@ public class StatisticsVisitor implements Visitor {
         germanBookingPaidByGoogleWalletCount++;
     }
 
-//    public void printStatistics() {
-//        if (englishBookingsPaidByPayPalCount > 0) {
-//            System.out.println("PayPal wurde " + englishBookingsPaidByPayPalCount + " mal in englischen Buchungen benutzt.");
-//        }
-//        if (germanBookingsPaidByPayPalCount > 0) {
-//            System.out.println("PayPal wurde " + germanBookingsPaidByPayPalCount + " mal in deutschen Buchungen benutzt.");
-//        }
-//        if (englishBookingPaidByMobileWalletCount > 0) {
-//            System.out.println("Mobile Money Wallet wurde " + englishBookingPaidByMobileWalletCount + " mal in englischen Buchungen benutzt.");
-//        }
-//        if (germanBookingPaidByMobileWalletCount > 0) {
-//            System.out.println("Mobile Money Wallet wurde " + germanBookingPaidByMobileWalletCount + " mal in deutschen Buchungen benutzt.");
-//        }
-//        if (englishBookingPaidByGoogleWalletCount > 0) {
-//            System.out.println("Google Wallet wurde " + englishBookingPaidByGoogleWalletCount + " mal in englischen Buchungen benutzt.");
-//        }
-//        if (germanBookingPaidByGoogleWalletCount > 0) {
-//            System.out.println("Google Wallet wurde " + germanBookingPaidByGoogleWalletCount + " mal in deutschen Buchungen benutzt.");
-//        }
-//    }
 }

@@ -19,7 +19,4 @@ public class Account {
         return name;
     }
 
-    public void setCurrencyAmount(CurrencyAmount currencyAmount) {
-        this.currencyAmount = currencyAmount;
-    }
 }

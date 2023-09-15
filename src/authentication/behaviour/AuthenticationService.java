@@ -34,7 +34,6 @@ public class AuthenticationService {
             }
         } else {
             credential = new ValidationCodeStrategy();
-            // At this point Legal person has only one strategy
         }
         credential.authenticate(sc);
         return credential;

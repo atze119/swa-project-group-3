@@ -1,10 +1,5 @@
 package content.structure;
 
-import booking.structure.Booking;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class File extends Content{
 
 

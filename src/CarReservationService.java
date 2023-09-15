@@ -13,7 +13,7 @@ import statistics.structure.StatisticsVisitor;
 
 import java.util.Scanner;
 
-public class Main {
+public class CarReservationService {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ContentService contentService = new ContentService();
@@ -63,5 +63,4 @@ public class Main {
         }
         statistics.printStatistics(visitor);
     }
-
 }

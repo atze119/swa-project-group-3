@@ -21,7 +21,6 @@ public class StatisticsServiceTest {
 
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     PrintStream ps = new PrintStream(baos);
-    PrintStream old = System.out;
 
     private StatisticsVisitor visitor;
     private StatisticsService statisticsService;

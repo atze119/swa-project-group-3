@@ -17,7 +17,9 @@ import resource.structure.Resource;
 import resource.structure.RoofBox;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 class ContentServiceTest {
@@ -29,6 +31,8 @@ class ContentServiceTest {
     private PaymentService paymentService;
     private ContentService contentService;
     private InputStream sysInBackup;
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    PrintStream ps = new PrintStream(baos);
 
     @BeforeEach
     void setUp() {
@@ -76,9 +80,12 @@ class ContentServiceTest {
                     Booking-%2$d: Date: %1$d.2023 Booking-Costs: 230
                     Payment-%3$d: Date: %1$d.2023 Transfer-Amount: 230
                                               Total-Amount: 230
-                                              """, paymentDummy.getPaymentMonth(), bookingDummy.getBookingId(), paymentDummy.getPaymentId()); // %1$d is the index for index 1 = month $d for number placeholder. Needed because we use random Month
+                                              
+                """, paymentDummy.getPaymentMonth(), bookingDummy.getBookingId(), paymentDummy.getPaymentId()); // %1$d is the index for index 1 = month $d for number placeholder. Needed because we use random Month
         contentService.addContent(bookingDummy, paymentDummy);
-        Assertions.assertEquals(expectedStructure, contentService.printStructure());
+        System.setOut(ps);
+        contentService.printStructure();
+        Assertions.assertEquals(expectedStructure, baos.toString());
 
     }
 

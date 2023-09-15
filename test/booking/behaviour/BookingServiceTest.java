@@ -43,7 +43,7 @@ class BookingServiceTest {
     }
 
     @Test
-    void createNaturalGermanBooking() {
+    void testCreateNaturalGermanBooking() {
         String userInput = "G";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
@@ -53,7 +53,7 @@ class BookingServiceTest {
     }
 
     @Test
-    void createNaturalEnglishBooking() {
+    void testCreateNaturalEnglishBooking() {
         String userInput = "E";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
@@ -63,7 +63,7 @@ class BookingServiceTest {
     }
 
     @Test
-    void createLegalPersonEnglishBooking() {
+    void testCreateLegalPersonEnglishBooking() {
         String userInput = "E";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
@@ -73,7 +73,7 @@ class BookingServiceTest {
     }
 
     @Test
-    void createLegalPersonGermanBooking() {
+    void testCreateLegalPersonGermanBooking() {
         String userInput = "G";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
@@ -83,7 +83,7 @@ class BookingServiceTest {
     }
 
     @Test
-    void createBookingWithoutPerson() {
+    void testCreateBookingWithoutPerson() {
         String userInput = "G";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
@@ -92,7 +92,7 @@ class BookingServiceTest {
     }
 
     @Test
-    void createBookingWithoutResource() {
+    void testCreateBookingWithoutResource() {
         String userInput = "G";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
