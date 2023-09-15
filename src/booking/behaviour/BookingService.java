@@ -15,7 +15,7 @@ public class BookingService {
         Booking booking = null;
         Scanner sc = new Scanner(System.in);
         boolean validInput = false;
-        System.out.println("Do you want to get your booking in german or english? German [G] | English [E]");
+        System.out.println("Do you want to get your invoice in german or english? German [G] | English [E]");
         while (!validInput) {
             String userInput = sc.next();
             if (!userInput.matches("G|g|E|e")) {
@@ -23,7 +23,7 @@ public class BookingService {
             } else if (userInput.matches("G|g")) {
                 GermanBooking germanBooking = new BookingBuilder()
                         .head(person.getName())
-                        .body(resource.getResource())
+                        .body(resource.getGermanResource())
                         .footer(resource.getCosts())
                         .buildGerman();
                 germanBooking.printBooking();
@@ -32,7 +32,7 @@ public class BookingService {
             } else {
                 EnglishBooking englishBooking = new BookingBuilder()
                         .head(person.getName())
-                        .body(resource.getResource())
+                        .body(resource.getEnglishResource())
                         .footer(resource.getCosts())
                         .buildEnglish();
                 englishBooking.printBooking();

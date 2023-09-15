@@ -7,8 +7,12 @@ public class RoofBox extends ResourceAdder {
     }
 
     @Override
-    public String getResource() {
-        return super.getResource() + ", roof box";
+    public String getEnglishResource() {
+        return super.getEnglishResource() + ", roof box";
+    }
+
+    public String getGermanResource() {
+        return super.getGermanResource() + ", Dachgepäckträger";
     }
 
     @Override

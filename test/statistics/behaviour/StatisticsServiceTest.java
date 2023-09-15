@@ -26,7 +26,7 @@ public class StatisticsServiceTest {
     private StatisticsService statisticsService;
 
     @BeforeEach
-    public void setUp() {
+     void setUp() {
         visitor = new StatisticsVisitor();
         statisticsService = new StatisticsService();
     }

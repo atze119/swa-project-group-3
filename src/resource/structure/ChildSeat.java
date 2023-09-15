@@ -6,8 +6,13 @@ public class ChildSeat extends ResourceAdder {
     }
 
     @Override
-    public String getResource() {
-        return super.getResource() + ", child seat";
+    public String getEnglishResource() {
+        return super.getEnglishResource() + ", child seat";
+    }
+
+    @Override
+    public String getGermanResource() {
+        return super.getGermanResource() + ", Kindersitz";
     }
 
     @Override
