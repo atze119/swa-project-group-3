@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="just edit some TODOS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/statistics/behavior/StatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statistics/behavior/StatisticsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/resource/behaviour/ResourceServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/resource/behaviour/ResourceServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/statistics/behaviour/StatisticsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/statistics/behaviour/StatisticsServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,42 +91,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentServiceTest.runPaymentTestMultipleTimes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="swa-project-group-3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="payment.behaviour.*" />
+          <option name="PATTERN" value="person.behaviour.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="payment.behaviour" />
-      <option name="MAIN_CLASS_NAME" value="payment.behaviour.PaymentServiceTest" />
-      <option name="METHOD_NAME" value="runPaymentTestMultipleTimes" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersonServiceTest.createPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="swa-project-group-3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PersonServiceTest" />
-      <option name="METHOD_NAME" value="createPerson" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ResourceServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="swa-project-group-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="resource.behaviour.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="resource.behaviour" />
-      <option name="MAIN_CLASS_NAME" value="resource.behaviour.ResourceServiceTest" />
+      <option name="PACKAGE_NAME" value="person.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="person.behaviour.PersonServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,20 +121,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StatisticsServiceTest.testPrintStatistics0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swa-project-group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="statistics.behaviour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="statistics.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="statistics.behaviour.StatisticsServiceTest" />
+      <option name="METHOD_NAME" value="testPrintStatistics0" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StatisticsServiceTest.testPrintStatistics2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swa-project-group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="statistics.behaviour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="statistics.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="statistics.behaviour.StatisticsServiceTest" />
+      <option name="METHOD_NAME" value="testPrintStatistics2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.PersonServiceTest" />
+      <item itemvalue="JUnit.StatisticsServiceTest.testPrintStatistics0" />
+      <item itemvalue="JUnit.StatisticsServiceTest.testPrintStatistics2" />
       <item itemvalue="JUnit.StatisticsServiceTest" />
-      <item itemvalue="JUnit.PaymentServiceTest.runPaymentTestMultipleTimes" />
-      <item itemvalue="JUnit.PersonServiceTest.createPerson" />
-      <item itemvalue="JUnit.ResourceServiceTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StatisticsServiceTest" />
+        <item itemvalue="JUnit.StatisticsServiceTest.testPrintStatistics0" />
+        <item itemvalue="JUnit.StatisticsServiceTest.testPrintStatistics2" />
+        <item itemvalue="JUnit.PersonServiceTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ResourceServiceTest" />
-        <item itemvalue="JUnit.PersonServiceTest.createPerson" />
-        <item itemvalue="JUnit.PaymentServiceTest.runPaymentTestMultipleTimes" />
       </list>
     </recent_temporary>
   </component>
@@ -177,6 +186,8 @@
       <workItem from="1688129565317" duration="128000" />
       <workItem from="1688210597018" duration="14408000" />
       <workItem from="1692963955533" duration="1484000" />
+      <workItem from="1694689078280" duration="3753000" />
+      <workItem from="1694765925734" duration="303000" />
     </task>
     <task id="LOCAL-00001" summary="Create Structure">
       <created>1685012362808</created>
@@ -285,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694551911989</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="just edit some TODOS">
+      <created>1694551967494</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1694551967494</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

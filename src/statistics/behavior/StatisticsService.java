@@ -35,19 +35,13 @@ public class StatisticsService{
 
 
     public void printStatistics(StatisticsVisitor visitor) {
-        System.out.println("PayPal wurde " + getEnglishBookingsPaidByPayPal(visitor) + " mal in englischen Buchungen benutzt.");
-
-        System.out.println("PayPal wurde " + getGermanBookingsPaidByPayPal(visitor) + " mal in deutschen Buchungen benutzt.");
-
-        System.out.println("Mobile Money Wallet wurde " + getEnglishBookingsPaidByMobileMoneyWallet(visitor) + " mal in englischen Buchungen benutzt.");
-
-        System.out.println("Mobile Money Wallet wurde " + getGermanBookingsPaidByMobileMoneyWallet(visitor) + " mal in deutschen Buchungen benutzt.");
-
-        System.out.println("Google Wallet wurde " + getEnglishBookingsPaidByGoogleWallet(visitor) + " mal in englischen Buchungen benutzt.");
-
-        System.out.println("Google Wallet wurde " + getGermanBookingsPaidByGoogleWallet(visitor) + " mal in deutschen Buchungen benutzt.");
-
-}
+        System.out.println("PayPal was used " + getEnglishBookingsPaidByPayPal(visitor) + " times in english bookings.");
+        System.out.println("PayPal was used " + getGermanBookingsPaidByPayPal(visitor) + " times in german bookings.");
+        System.out.println("Mobile Money Wallet was used " + getEnglishBookingsPaidByMobileMoneyWallet(visitor) + " times in english bookings.");
+        System.out.println("Mobile Money Wallet was used " + getGermanBookingsPaidByMobileMoneyWallet(visitor) + " times in german bookings.");
+        System.out.println("Google Wallet was used " + getEnglishBookingsPaidByGoogleWallet(visitor) + " times in english bookings.");
+        System.out.println("Google Wallet was used " + getGermanBookingsPaidByGoogleWallet(visitor) + " times in german bookings.");
+    }
 
 }
 
