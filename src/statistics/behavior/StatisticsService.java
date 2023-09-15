@@ -35,12 +35,17 @@ public class StatisticsService{
 
 
     public void printStatistics(StatisticsVisitor visitor) {
-        System.out.println("PayPal was used " + getEnglishBookingsPaidByPayPal(visitor) + " times in english bookings.");
-        System.out.println("PayPal was used " + getGermanBookingsPaidByPayPal(visitor) + " times in german bookings.");
-        System.out.println("Mobile Money Wallet was used " + getEnglishBookingsPaidByMobileMoneyWallet(visitor) + " times in english bookings.");
-        System.out.println("Mobile Money Wallet was used " + getGermanBookingsPaidByMobileMoneyWallet(visitor) + " times in german bookings.");
-        System.out.println("Google Wallet was used " + getEnglishBookingsPaidByGoogleWallet(visitor) + " times in english bookings.");
-        System.out.println("Google Wallet was used " + getGermanBookingsPaidByGoogleWallet(visitor) + " times in german bookings.");
+        String result = """
+                PayPal was used %d times in english bookings.
+                PayPal was used %d times in german bookings.
+                Mobile Money Wallet was used %d times in english bookings.
+                Mobile Money Wallet was used %d times in german bookings.
+                Google Wallet was used %d times in english bookings.
+                Google Wallet was used %d times in german bookings.
+                """.formatted(getEnglishBookingsPaidByPayPal(visitor),getGermanBookingsPaidByPayPal(visitor), getEnglishBookingsPaidByMobileMoneyWallet(visitor),
+                getGermanBookingsPaidByMobileMoneyWallet(visitor), getEnglishBookingsPaidByGoogleWallet(visitor), getGermanBookingsPaidByGoogleWallet(visitor));
+
+        System.out.print(result);
     }
 
 }

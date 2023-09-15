@@ -10,6 +10,6 @@ public class UserNamePasswordStrategy implements Credential {
         sc.next();
         System.out.println("Input your Password");
         sc.next();
-        System.out.println("Registered!");
+        System.out.println("Registered!\n");
     }
 }

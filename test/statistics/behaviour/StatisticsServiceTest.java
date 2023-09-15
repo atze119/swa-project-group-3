@@ -3,6 +3,7 @@ package statistics.behaviour;
 import booking.structure.EnglishBooking;
 import booking.structure.GermanBooking;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import payment.structure.GoogleWalletPayment;
@@ -39,19 +40,19 @@ public class StatisticsServiceTest {
 
     @Test
     public void testPrintStatistics0() {
-//        String expectedPrint = """
-//                  PayPal was used 0 times in english bookings.
-//                  PayPal was used 0 times in german bookings.
-//                  Mobile Money Wallet was used 0 times in english bookings.
-//                  Mobile Money Wallet was used 0 times in german bookings.
-//                  Google Wallet was used 0 times in english bookings.
-//                  Google Wallet was used 0 times in german bookings.
-//                  """;
+        String expectedPrint = """
+                  PayPal was used 0 times in english bookings.
+                  PayPal was used 0 times in german bookings.
+                  Mobile Money Wallet was used 0 times in english bookings.
+                  Mobile Money Wallet was used 0 times in german bookings.
+                  Google Wallet was used 0 times in english bookings.
+                  Google Wallet was used 0 times in german bookings.
+                  """;
+
         System.setOut(ps);
         statisticsService.printStatistics(visitor);
 
-
-//        assertEquals(expectedPrint, statisticsService.printStatistics(visitor));
+        assertEquals(expectedPrint, baos.toString());
         assertEquals(0, visitor.englishBookingsPaidByPayPalCount);
         assertEquals(0, visitor.germanBookingsPaidByPayPalCount);
         assertEquals(0, visitor.englishBookingPaidByMobileWalletCount);
@@ -76,7 +77,19 @@ public class StatisticsServiceTest {
         germanBooking2.accept(visitor, new MobileMoneyWalletPayment());
         germanBooking3.accept(visitor, new GoogleWalletPayment());
 
+        String expectedPrint = """
+                  PayPal was used 1 times in english bookings.
+                  PayPal was used 1 times in german bookings.
+                  Mobile Money Wallet was used 1 times in english bookings.
+                  Mobile Money Wallet was used 1 times in german bookings.
+                  Google Wallet was used 1 times in english bookings.
+                  Google Wallet was used 1 times in german bookings.
+                  """;
+
+        System.setOut(ps);
         statisticsService.printStatistics(visitor);
+
+        assertEquals(expectedPrint, baos.toString());
 
         assertEquals(1, visitor.englishBookingsPaidByPayPalCount);
         assertEquals(1, visitor.germanBookingsPaidByPayPalCount);
@@ -114,7 +127,19 @@ public class StatisticsServiceTest {
         germanBooking5.accept(visitor, new MobileMoneyWalletPayment());
         germanBooking6.accept(visitor, new GoogleWalletPayment());
 
+        String expectedPrint = """
+                  PayPal was used 2 times in english bookings.
+                  PayPal was used 2 times in german bookings.
+                  Mobile Money Wallet was used 2 times in english bookings.
+                  Mobile Money Wallet was used 2 times in german bookings.
+                  Google Wallet was used 2 times in english bookings.
+                  Google Wallet was used 2 times in german bookings.
+                  """;
+
+        System.setOut(ps);
         statisticsService.printStatistics(visitor);
+
+        assertEquals(expectedPrint, baos.toString());
 
         assertEquals(2, visitor.englishBookingsPaidByPayPalCount);
         assertEquals(2, visitor.germanBookingsPaidByPayPalCount);

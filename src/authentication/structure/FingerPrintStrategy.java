@@ -7,6 +7,6 @@ public class FingerPrintStrategy implements Credential {
     public void authenticate(Scanner sc) {
         System.out.println("You have chosen the Fingerprint-Strategy");
         System.out.println("Scanning Finger");
-        System.out.println("Done!");
+        System.out.println("Done!\n");
     }
 }

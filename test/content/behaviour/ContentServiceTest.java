@@ -78,6 +78,7 @@ class ContentServiceTest {
                                               """, paymentDummy.getPaymentMonth(), bookingDummy.getBookingId(), paymentDummy.getPaymentId()); // %1$d is the index for index 1 = month $d for number placeholder. Needed because we use random Month
         contentService.addContent(bookingDummy, paymentDummy);
         Assertions.assertEquals(expectedStructure, contentService.printStructure());
+
     }
 
     @Test
