@@ -10,6 +10,7 @@ import person.structure.Person;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.Scanner;
 
 class PersonServiceTest {
     private Person person;
@@ -32,7 +33,7 @@ class PersonServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        person = PersonService.createPerson();
+        person = PersonService.createPerson(new Scanner(System.in));
         Assertions.assertTrue(person instanceof NaturalPerson);
     }
     @Test
@@ -41,7 +42,7 @@ class PersonServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        person = PersonService.createPerson();
+        person = PersonService.createPerson(new Scanner(System.in));
         Assertions.assertTrue(person instanceof LegalPerson);
     }
 
@@ -51,7 +52,7 @@ class PersonServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        person = PersonService.createPerson();
+        person = PersonService.createPerson(new Scanner(System.in));
         Assertions.assertNull(person);
     }
 
@@ -61,7 +62,7 @@ class PersonServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        person = PersonService.createPerson();
+        person = PersonService.createPerson(new Scanner(System.in));
         Assertions.assertNull(person);
     }
 }

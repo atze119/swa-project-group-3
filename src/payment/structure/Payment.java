@@ -2,7 +2,7 @@ package payment.structure;
 
 import booking.structure.Booking;
 
-public abstract class Payment{
+public abstract class Payment {
 
     //visitor pattern
 //    public void accept(Visitor visitor) {

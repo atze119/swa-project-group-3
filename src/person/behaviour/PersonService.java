@@ -8,11 +8,10 @@ import java.util.Scanner;
 
 public class PersonService {
 
-    public static Person createPerson() {
+    public static Person createPerson(Scanner sc) {
         Person person = null;
         PersonType personType= null;
         boolean correctData = false;
-        Scanner sc = new Scanner(System.in);
         while (!correctData) { // as long as reset == false it will
             boolean correctInput = false;
             while (!correctInput) {

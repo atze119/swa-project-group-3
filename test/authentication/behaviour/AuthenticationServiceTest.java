@@ -11,6 +11,7 @@ import person.structure.Person;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.Scanner;
 
 class AuthenticationServiceTest {
     private AuthenticationService authenticationService;
@@ -38,7 +39,7 @@ class AuthenticationServiceTest {
 
     @Test
     void authenticateLegalSubject() {
-        Credential credential = authenticationService.authenticateSubject(legalPerson);
+        Credential credential = authenticationService.authenticateSubject(legalPerson, new Scanner(System.in));
         Assertions.assertNotNull(credential);
     }
 
@@ -48,7 +49,7 @@ class AuthenticationServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        Credential credential = authenticationService.authenticateSubject(naturalPerson);
+        Credential credential = authenticationService.authenticateSubject(naturalPerson, new Scanner(System.in));
         Assertions.assertNotNull(credential);
     }
 

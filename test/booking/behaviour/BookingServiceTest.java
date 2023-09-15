@@ -15,6 +15,7 @@ import resource.structure.RoofBox;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.Scanner;
 
 class BookingServiceTest {
     private Person naturalPerson;
@@ -22,7 +23,7 @@ class BookingServiceTest {
     private Resource resource;
     private BookingService bookingService;
     private InputStream sysInBackup;
-    //TODO Test schreiben für createBooking
+
     @BeforeEach
     void setUp() {
         resource = new ChildSeat(new RoofBox(new Car()));
@@ -47,7 +48,7 @@ class BookingServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        Booking booking = bookingService.createBooking(naturalPerson, resource);
+        Booking booking = bookingService.createBooking(naturalPerson, resource, new Scanner(System.in));
         Assertions.assertNotNull(booking);
     }
 
@@ -57,7 +58,7 @@ class BookingServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        Booking booking = bookingService.createBooking(naturalPerson, resource);
+        Booking booking = bookingService.createBooking(naturalPerson, resource, new Scanner(System.in));
         Assertions.assertNotNull(booking);
     }
 
@@ -67,7 +68,7 @@ class BookingServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        Booking booking = bookingService.createBooking(legalPerson, resource);
+        Booking booking = bookingService.createBooking(legalPerson, resource, new Scanner(System.in));
         Assertions.assertNotNull(booking);
     }
 
@@ -77,7 +78,7 @@ class BookingServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        Booking booking = bookingService.createBooking(legalPerson, resource);
+        Booking booking = bookingService.createBooking(legalPerson, resource, new Scanner(System.in));
         Assertions.assertNotNull(booking);
     }
 
@@ -87,7 +88,7 @@ class BookingServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        Assertions.assertThrows(NullPointerException.class, () -> bookingService.createBooking(null, resource));
+        Assertions.assertThrows(NullPointerException.class, () -> bookingService.createBooking(null, resource, new Scanner(System.in)));
     }
 
     @Test
@@ -96,6 +97,6 @@ class BookingServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
 
-        Assertions.assertThrows(NullPointerException.class, () -> bookingService.createBooking(naturalPerson, null));
+        Assertions.assertThrows(NullPointerException.class, () -> bookingService.createBooking(naturalPerson, null, new Scanner(System.in)));
     }
 }

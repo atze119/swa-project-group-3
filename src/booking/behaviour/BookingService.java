@@ -11,9 +11,8 @@ import java.util.Scanner;
 
 public class BookingService {
 
-    public Booking createBooking(Person person, Resource resource) {
+    public Booking createBooking(Person person, Resource resource, Scanner sc) {
         Booking booking = null;
-        Scanner sc = new Scanner(System.in);
         boolean validInput = false;
         System.out.println("Do you want to get your invoice in german or english? German [G] | English [E]");
         while (!validInput) {

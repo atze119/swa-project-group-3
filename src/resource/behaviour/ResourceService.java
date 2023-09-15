@@ -8,8 +8,7 @@ public class ResourceService { // Car == the main Resource
 
     private Resource resource;
 
-    public Resource getSelectedResource() { // return resource for JUnit test (null testing)
-        Scanner sc = new Scanner(System.in);
+    public Resource getSelectedResource(Scanner sc) { // return resource for JUnit test (null testing)
         boolean userInput = false;
         while (!userInput) {
             System.out.println("If you want to book something extra to your car input [Y] for Yes or [N] for No to the following questions: ");

@@ -19,30 +19,30 @@ public class Main {
         ContentService contentService = new ContentService();
         StatisticsVisitor visitor = new StatisticsVisitor();
         StatisticsService statistics = new StatisticsService();
-        Person person;
         AuthenticationService authenticationService;
         BookingService bookingService;
+        Person person;
         Booking booking;
         ResourceService resourceService;
         Resource resource;
         PaymentService paymentService;
         Payment payment;
-        carReservation:while(true) {
-            person = PersonService.createPerson();
+        carReservation: while(true) {
+            person = PersonService.createPerson(sc);
             if (person == null) {
                 return;
             }
             authenticationService = new AuthenticationService();
-            authenticationService.authenticateSubject(person);
+            authenticationService.authenticateSubject(person, sc);
 
             resourceService = new ResourceService();
-            resource = resourceService.getSelectedResource();
+            resource = resourceService.getSelectedResource(sc);
 
             bookingService = new BookingService();
-            booking = bookingService.createBooking(person, resource);
+            booking = bookingService.createBooking(person, resource, sc);
 
             paymentService = new PaymentService();
-            payment = paymentService.payAmount(booking, person);
+            payment = paymentService.payAmount(booking, person, sc);
 
             contentService.addContent(booking, payment);
             contentService.printStructure();

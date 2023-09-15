@@ -8,9 +8,8 @@ import java.util.Scanner;
 
 public class AuthenticationService {
 
-    public Credential authenticateSubject(Person subject) {    //Subject als Fachtyp eigene Klasse?
+    public Credential authenticateSubject(Person subject, Scanner sc) {    //Subject als Fachtyp eigene Klasse?
         Credential credential = null;
-        Scanner sc = new Scanner(System.in);
         if (subject instanceof NaturalPerson) {
             System.out.println("""
                     Choose between Username-Password-Strategy: 1

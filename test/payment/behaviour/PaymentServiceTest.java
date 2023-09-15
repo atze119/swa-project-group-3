@@ -18,6 +18,7 @@ import resource.structure.RoofBox;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.Scanner;
 
 class PaymentServiceTest {
 
@@ -37,7 +38,7 @@ class PaymentServiceTest {
         String userInput = "G";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
-        bookingDummy = bookingService.createBooking(naturalPerson, resource);
+        bookingDummy = bookingService.createBooking(naturalPerson, resource, new Scanner(System.in));
         sysInBackup = System.in;
     }
 
@@ -56,7 +57,7 @@ class PaymentServiceTest {
         String userInput = "1";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
-        Payment payment = paymentService.payAmount(bookingDummy, naturalPerson);
+        Payment payment = paymentService.payAmount(bookingDummy, naturalPerson, new Scanner(System.in));
         Assertions.assertTrue(payment instanceof GoogleWalletPayment);
     }
 
@@ -65,7 +66,7 @@ class PaymentServiceTest {
         String userInput = "2";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
-        Payment payment = paymentService.payAmount(bookingDummy, naturalPerson);
+        Payment payment = paymentService.payAmount(bookingDummy, naturalPerson, new Scanner(System.in));
         Assertions.assertTrue(payment instanceof MobileMoneyWalletPayment);
     }
 
@@ -74,7 +75,7 @@ class PaymentServiceTest {
         String userInput = "3";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
-        Payment payment = paymentService.payAmount(bookingDummy, naturalPerson);
+        Payment payment = paymentService.payAmount(bookingDummy, naturalPerson, new Scanner(System.in));
         Assertions.assertTrue(payment instanceof PayPalPayment);
     }
 

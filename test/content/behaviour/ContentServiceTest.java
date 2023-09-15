@@ -18,6 +18,7 @@ import resource.structure.RoofBox;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.Scanner;
 
 class ContentServiceTest {
     private Booking bookingDummy;
@@ -39,11 +40,11 @@ class ContentServiceTest {
         String userInput = "G";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
-        bookingDummy = bookingService.createBooking(naturalPerson, resource);
+        bookingDummy = bookingService.createBooking(naturalPerson, resource, new Scanner(System.in));
         userInput = "1";
         in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
-        paymentDummy = paymentService.payAmount(bookingDummy, naturalPerson);
+        paymentDummy = paymentService.payAmount(bookingDummy, naturalPerson, new Scanner(System.in));
         sysInBackup = System.in;
     }
 

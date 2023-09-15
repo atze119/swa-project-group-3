@@ -11,7 +11,7 @@ public class PaymentService {
 
     private static CurrencyAmount currencyAmountReceiver = new CurrencyAmount(0);
 
-    public Payment payAmount(Booking booking, Person person){
+    public Payment payAmount(Booking booking, Person person, Scanner sc){
 
         CurrencyAmount currencyAmountSender = new CurrencyAmount(booking.getCosts());
         Account senderAccount = new Account(currencyAmountSender, person.getName());
@@ -24,7 +24,6 @@ public class PaymentService {
                 Mobile Money Wallet: 2
                 PayPal: 3
                 """);
-        Scanner sc = new Scanner(System.in);
         boolean validInput = false;
         while (!validInput) {
             String userInput = sc.next();
