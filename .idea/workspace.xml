@@ -4,29 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="added more tests and some quality changes in printing texts">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_12_2023_12_07_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_12_2023_12_07_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_12_2023_12_10_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_12_2023_12_10_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="56dbbbed-8aba-453c-95dd-68cf36d6bc5a" name="Changes" comment="fixed typos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/authentication/structure/ValidationCodeStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/authentication/structure/ValidationCodeStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/booking/behaviour/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/booking/behaviour/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/behaviour/ContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/behaviour/ContentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/structure/SummaryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/structure/SummaryFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/person/structure/PersonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/structure/PersonFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/behaviour/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/behaviour/ResourceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/structure/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/structure/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/structure/ChildSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/structure/ChildSeat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/structure/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/structure/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/structure/ResourceAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/structure/ResourceAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/structure/RoofBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/structure/RoofBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/authentication/behaviour/AuthenticationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/authentication/behaviour/AuthenticationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/booking/behaviour/BookingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/booking/behaviour/BookingServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/content/behaviour/ContentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/content/behaviour/ContentServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/payment/behaviour/PaymentServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/person/behaviour/PersonServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/person/behaviour/PersonServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/resource/behaviour/ResourceServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/resource/behaviour/ResourceServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/statistics/behaviour/StatisticsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/statistics/behaviour/StatisticsServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +41,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2QHXywCZLoVBdlmxeepiiP8gSWf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -67,31 +52,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "dart.analysis.tool.window.visible": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Movitz/IdeaProjects/swa-project-group-3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Movitz/IdeaProjects/swa-project-group-3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -105,29 +90,7 @@
       <recent name="payment.structure" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="swa-project-group-3" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContentServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="swa-project-group-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="content.behaviour.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="content.behaviour" />
-      <option name="MAIN_CLASS_NAME" value="content.behaviour.ContentServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ContentServiceTest.testPrintStructure">
     <configuration name="ContentServiceTest.testPrintStructure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="swa-project-group-3" />
       <extension name="coverage">
@@ -175,20 +138,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PersonServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swa-project-group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="person.behaviour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="person.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="person.behaviour.PersonServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResourceServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swa-project-group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="resource.behaviour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="resource.behaviour" />
+      <option name="MAIN_CLASS_NAME" value="resource.behaviour.ResourceServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.PersonServiceTest" />
+      <item itemvalue="JUnit.ResourceServiceTest" />
       <item itemvalue="JUnit.ContentServiceTest.testPrintStructure" />
       <item itemvalue="JUnit.ContentServiceTest.testWithNoBooking" />
-      <item itemvalue="JUnit.ContentServiceTest" />
       <item itemvalue="JUnit.PaymentServiceTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ContentServiceTest" />
         <item itemvalue="JUnit.ContentServiceTest.testPrintStructure" />
-        <item itemvalue="JUnit.ContentServiceTest.testWithNoBooking" />
+        <item itemvalue="JUnit.ResourceServiceTest" />
+        <item itemvalue="JUnit.PersonServiceTest" />
         <item itemvalue="JUnit.PaymentServiceTest" />
+        <item itemvalue="JUnit.ContentServiceTest.testWithNoBooking" />
       </list>
     </recent_temporary>
   </component>
@@ -209,6 +202,7 @@
       <workItem from="1688210597018" duration="14408000" />
       <workItem from="1692963955533" duration="11942000" />
       <workItem from="1694369459554" duration="6765000" />
+      <workItem from="1694765061779" duration="1265000" />
     </task>
     <task id="LOCAL-00001" summary="Create Structure">
       <created>1685012362808</created>
@@ -310,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693002010746</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added more tests and some quality changes in printing texts">
+      <option name="closed" value="true" />
+      <created>1694700204400</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1694700204400</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +357,8 @@
     <MESSAGE value="comment code adjustments" />
     <MESSAGE value="fix error when userinput is alphabetic at extra booking.&#10;adjust some statistics visitor pattern things in most classes.&#10;added statistics output in mainclass." />
     <MESSAGE value="added more tests and some quality changes in printing texts" />
-    <option name="LAST_COMMIT_MESSAGE" value="added more tests and some quality changes in printing texts" />
+    <MESSAGE value="fixed typos" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed typos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

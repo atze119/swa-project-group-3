@@ -15,7 +15,7 @@ public class BookingService {
         Booking booking = null;
         Scanner sc = new Scanner(System.in);
         boolean validInput = false;
-        System.out.println("Do you want to get your booking in german or english? German [G] | English [E]");
+        System.out.println("Do you want to get your invoice in german or english? German [G] | English [E]");
         while (!validInput) {
             String userInput = sc.next();
             if (!userInput.matches("G|g|E|e")) {

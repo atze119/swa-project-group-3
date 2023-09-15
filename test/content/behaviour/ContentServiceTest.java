@@ -61,7 +61,7 @@ class ContentServiceTest {
 
     @Test
     void testPrintStructure() {
-        String actualStructure = String.format("""
+        String expectedStructure = String.format("""
                 - Folder: Content
                   - Folder: Booking
                     - Folder: Year 2023
@@ -74,9 +74,10 @@ class ContentServiceTest {
                   - File: Summary
                     Booking-%2$d: Date: %1$d.2023 Booking-Costs: 230
                     Payment-%3$d: Date: %1$d.2023 Transfer-Amount: 230
-                                              Total-Amount: 230""", paymentDummy.getPaymentMonth(), bookingDummy.getBookingId(), paymentDummy.getPaymentId()); // %1$d is the index for index 1 = month $d for number placeholder. Needed because we use random Month
+                                              Total-Amount: 230
+                                              """, paymentDummy.getPaymentMonth(), bookingDummy.getBookingId(), paymentDummy.getPaymentId()); // %1$d is the index for index 1 = month $d for number placeholder. Needed because we use random Month
         contentService.addContent(bookingDummy, paymentDummy);
-        Assertions.assertEquals(contentService.printStructure(), actualStructure);
+        Assertions.assertEquals(expectedStructure, contentService.printStructure());
     }
 
     @Test

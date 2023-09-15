@@ -56,7 +56,7 @@ class PersonServiceTest {
     }
 
     @Test
-    void testCreatePersonWithoutLicenese() {
+    void testCreatePersonWithoutLicense() {
         String userInput = "N Max Mustermann Y N";
         ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(in);
